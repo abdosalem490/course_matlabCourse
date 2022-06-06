@@ -1,0 +1,9 @@
+%---- Note: The table T and X has been defined based on the commands in the previous tutorial ---- 
+
+>> X.sixthcolumn = rand(32,1) 
+
+>> X.Var7 = rand(32,1) 
+
+>> X.Var7 = []
+
+>> X = X(:,1:end-1)

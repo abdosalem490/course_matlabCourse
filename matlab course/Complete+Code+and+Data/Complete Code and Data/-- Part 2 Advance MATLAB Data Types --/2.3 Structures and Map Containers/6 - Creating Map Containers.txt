@@ -1,0 +1,17 @@
+>> mycont = containers.Map() 
+
+>> mycont = containers.Map({'jan','feb','march'}, {1 2 3})
+
+>> mycont('jan')
+
+>> mycont('feb')
+
+>> x = rand(3)
+
+>> mycont = containers.Map({'jan','feb','march'}, {x(1,:),x(2,:),x(3,:)})
+
+>> mycont('feb')
+
+>> keys(mycont)
+
+>> values(mycont)

@@ -1,0 +1,22 @@
+% --- Put this code int eh callback of edit box val_1 ----% 
+
+a = get(handles.Val_1, 'String'); 
+a = str2num(a); 
+setappdata(0,'num_1',a);
+
+% --- Put this code int eh callback of edit box val_2 ----% 
+
+b = get(handles.Val_2, 'String'); 
+b = str2num(b); 
+setappdata(0,'num_2',b);
+
+
+% --- Put this code int eh callback of push button ----% 
+
+m = getappdata(0,'num_1'); 
+n = getappdata(0,'num_2');
+an = m+n;
+an = num2str(an); 
+set(handles.ans,'String',an); 
+ 
+

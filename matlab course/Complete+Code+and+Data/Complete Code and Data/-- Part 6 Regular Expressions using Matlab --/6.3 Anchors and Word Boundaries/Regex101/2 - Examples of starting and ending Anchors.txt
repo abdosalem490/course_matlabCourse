@@ -1,0 +1,29 @@
+
+regex:^\d$
+string: 8 
+
+regex: ^\d$
+string: 89
+
+regex: ^\d$
+string: 8         (Please note there is a space after digit 8) 
+
+regex: ^\d$
+string: 8 9
+
+regex: ^\d$
+string: a
+
+regex: ^\d\d$
+string: 89
+
+regex: ^.$
+string: a
+
+regex: ^[A-Z]$
+string: A
+
+regex: ^[^A-Z]$
+string: a
+
+  

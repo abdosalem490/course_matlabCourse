@@ -1,0 +1,8 @@
+%% Main program 
+% This piece of program contains the main program
+X = rand(10,1)
+
+
+%% sub part 
+% This is the sub part fo the program for displaying contents
+plot(X);

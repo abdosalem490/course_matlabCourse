@@ -1,0 +1,9 @@
+%---- Note: The timetable Ourtimetable has been defined based on the commands in the previous tutorial ---- 
+
+>> Ourtimetable('',:) 
+
+>> Ourtimetable('08-Nov-2000',:)  
+
+>> timerange = timerange('06-Nov-2000','07-Apr-2002')
+
+>> Ourtimetable(timerange,:)

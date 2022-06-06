@@ -1,0 +1,12 @@
+% ------ In mainapp.mlapp add the following lines to the callback function of the push button ----
+    
+v = app.EditField.Value;
+y = 0:pi/100:v*pi;
+g = graphdata;
+g.Data = y;
+
+% ------ In the graphdata.mlapp add the following lines to the callback function of the push button 
+
+y = app.Data;
+plot(app.UIAxes,y);
+

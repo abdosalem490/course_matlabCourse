@@ -1,0 +1,29 @@
+%---- Note: The timetable Ourtimetable has been defined based on the commands in the previous tutorial ---- 
+
+>> Ourtimetable.fifthcolum = [4;5;6]
+
+>> Ourtimetable.fifthcolum = []
+
+>> sortrows(Ourtimetable) 
+
+>> sortrows(Ourtimetable,'temp')
+
+>> sortrows(Ourtimetable,'temp','Descend')
+
+>> Ourtimetable.temp = Ourtimetable.temp*8
+
+>> Ourtimetable(1:2,:) 
+
+>> Ourtimetable(1:2,1:2)
+
+>> Ourtimetable.Properties.VariableNames = {'Timestmps','Temperatures','Humiditylevel'}
+
+>> summary(Ourtimetable)
+
+>> Ourtimetable.Properties.Description = 'This time table contains information regarding the temperatures' 
+
+>> Ourtimetable.Properties.VariableDescriptions = {'first variable' 'second variable' 'third variable'}
+
+>> Ourtimetable.Properties.VariableUnits = {'seconds' 'forenheit' 'humidity'}
+
+>> X = evalc('summary(Ourtimetable)') 

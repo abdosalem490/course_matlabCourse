@@ -1,0 +1,6 @@
+
+regexp('abcc abc','a(bc|b)c','match') 
+
+regexp('abcc abc','a(?>bc|b)c','match') 
+
+regexp('abc','(?>.*)c','match') 

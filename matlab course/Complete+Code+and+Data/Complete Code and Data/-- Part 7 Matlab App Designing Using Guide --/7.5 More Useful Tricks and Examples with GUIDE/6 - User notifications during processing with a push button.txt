@@ -1,0 +1,10 @@
+% ----- Put this code in the callback of push button ---- %
+
+set(handles.pushbutton1,'string','Processing...'); 
+pause(0.01);
+
+x = rand(6000000,1); 
+sort(x);
+sort(x);
+sort(x);
+set(handles.pushbutton1,'string','Push Me')

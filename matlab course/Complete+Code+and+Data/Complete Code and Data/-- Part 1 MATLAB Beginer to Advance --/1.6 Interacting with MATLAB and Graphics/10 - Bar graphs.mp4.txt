@@ -1,0 +1,19 @@
+y = [20 25 30 50 90 80];
+
+x = 2000:2005; 
+
+bar(x,y); % also try bar(x,y,0.1 )
+
+y = [20 25 30 50 90 80; 50 60 70 80 90 100]; 
+
+bar(y); 
+
+bar(y,'stacked'); 
+
+barh(y); 
+
+barh(y,'stacked'); 
+
+barh(x,y); 
+
+barh(x,y,0.4); 

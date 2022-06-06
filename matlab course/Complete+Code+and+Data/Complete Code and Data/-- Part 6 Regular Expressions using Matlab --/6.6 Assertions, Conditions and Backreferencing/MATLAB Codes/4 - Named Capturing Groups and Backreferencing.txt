@@ -1,0 +1,6 @@
+
+regexp('cat=cat','([atc]+)=\1','match')
+
+regexp('cat=cat','([atc])+=\1','match')
+
+regexp('axa','(?<tag1>\w)?x\k<tag1>','match') 

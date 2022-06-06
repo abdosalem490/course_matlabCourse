@@ -1,0 +1,53 @@
+clear all 
+
+%Step 1: Initialize n = 1; Summation_numbers(1) = 1; Divisors = 1;  
+n = 1; 
+Summation_numbers(1) = 1; 
+Divisors = 1;  
+
+%Step 2: Repeat until Divisors <= 20
+while length(Divisors) <= 20
+
+    %Step 3: Increment n by one
+    n = n +1;
+
+    %Step 4: Summation_numbers(n) = n + Summation_numbers(n-1);
+    Summation_numbers(n) = n + Summation_numbers(n-1);
+    
+    %Step 5: Determine the divisors of Summation_numbers(n)
+    Numbers = 1:Summation_numbers(n);
+    Divisors = Numbers(rem(Summation_numbers(n),Numbers)==0);
+end
+
+%Step 6: Print the Summation_number(n) with Divisors
+fprintf('\nThe least number with 20 or more divisors is %d. \nThe divisors of the number are \n',Summation_numbers(n)); 
+fprintf('%d \t', Divisors);
+
+
+%%%%%% Refining the code with faster computation %%%%%%%%
+
+clear all 
+
+%Step 1: Initialize n = 1; Summation_numbers(1) = 1; Divisors = 1;  
+n = 1; 
+Summation_numbers(1) = 1; 
+Divisors = 1;  
+
+%Step 2: Repeat until Divisors <= 20
+while length(Divisors) <= 20
+
+    %Step 3: Increment n by one
+    n = n +1;
+
+    %Step 4: Summation_numbers(n) = n + Summation_numbers(n-1);
+    Summation_numbers(n) = n + Summation_numbers(n-1);
+    
+    %Step 5: Determine the divisors of Summation_numbers(n)
+    Numbers = 1:Summation_numbers(n)/2;
+    Divisors = [Numbers(rem(Summation_numbers(n),Numbers)==0) Summation_numbers(n)] 
+end
+
+%Step 6: Print the Summation_number(n) with Divisors
+fprintf('\nThe least number with 20 or more divisors is %d. \nThe divisors of the number are \n',Summation_numbers(n)); 
+fprintf('%d \t', Divisors);
+

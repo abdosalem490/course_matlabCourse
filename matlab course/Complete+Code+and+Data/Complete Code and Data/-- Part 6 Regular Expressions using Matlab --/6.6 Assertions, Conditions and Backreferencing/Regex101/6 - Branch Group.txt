@@ -1,0 +1,30 @@
+
+regex: (?|(a)|(b)|(c))
+string: abc
+
+regex: (?|(a)|(b)|(c))\1
+string: aa bb cc
+
+regex: (a)|(b)|(c)
+string: aa bc cc
+ 
+regex: (a)|(b)|(c)
+string: abc 
+
+regex: (?|abc|(d)(e)(f)|g(h)i)
+string: abc
+
+regex: (?|abc|(d)(e)(f)|g(h)i)
+string: def
+
+regex: (?|abc|(d)(e)(f)|g(h)i)
+string: ghi
+
+regex: (?|abc|(d)(e)(f)|g(h)i)
+string: def
+
+regex: (x)(?|abc|(d)(e)(f)|g(h)i)(y)   (Q: How many groups ? Ans: 5)
+string: 
+
+
+

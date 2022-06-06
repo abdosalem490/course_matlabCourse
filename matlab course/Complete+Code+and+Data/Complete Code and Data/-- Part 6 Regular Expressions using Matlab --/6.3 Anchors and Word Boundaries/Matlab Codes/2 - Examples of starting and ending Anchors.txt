@@ -1,0 +1,20 @@
+
+regexp('8','^\d$','match')       
+
+regexp('89','^\d$','match') 	
+
+regexp('8 ','^\d$','match')	
+
+regexp('8 9','^\d$','match')	
+
+regexp('a','^\d$','match')	
+
+regexp('89','^\d\d$','match') 
+
+regexp('a','^.$','match')
+
+regexp('A','^[A-Z]$','match')
+
+regexp('a','^[^A-Z]$','match')
+
+  

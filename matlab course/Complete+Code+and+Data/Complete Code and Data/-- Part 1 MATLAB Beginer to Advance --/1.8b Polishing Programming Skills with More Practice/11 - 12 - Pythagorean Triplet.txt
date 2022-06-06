@@ -1,0 +1,56 @@
+clear all 
+flag = 1; 
+
+%Step 1: Repeat for each A value from 1 to 1000
+for A =1:1000 
+
+    %Step 2: Repeat for each B value from 1 to 1000       
+    for B=A+1:1000
+
+        %Step 3: Repeat for each C value from 1 to 1000
+        for C = B+1:1000
+
+            %Step 4: Check if a < b < c and a2 + b2 = c2 and a + b +c = 1000
+            if (A^2 + B^2 == C^2) && (A + B + C == 1000) 
+
+                %Step 5: Exit and Print the number A, B, C            
+                fprintf('the required Pathagorian Triplets are %d %d %d \n',A,B,C);
+                flag = 0;
+                break;
+            end 
+        end 
+        if flag == 0
+            break;
+        end 
+    end 
+    if flag == 0
+        break; 
+    end 
+end 
+
+
+
+%%%%%%%% Refined code without break statement %%%%%%%%%%%%%%%%%%%%%%%
+clear all 
+
+%Step 1: Repeat for each A value from 1 to 1000
+for A =1:1000 
+    
+    %Step 2: Repeat for each B value from 1 to 1000       
+    for B=A+1:1000
+
+        %Step 3: Repeat for each C value from 1 to 1000
+        for C = B+1:1000
+            
+            %Step 4: Check if a < b < c and a2 + b2 = c2 and a + b +c = 1000
+            if (A^2 + B^2 == C^2) && (A + B + C == 1000)
+                
+                %Step 5: Exit and Print the number A, B, C            
+                fprintf('the required Pathagorian Triplets are %d %d %d \n',A,B,C);
+                return;
+            end 
+        end 
+    end 
+end 
+
+

@@ -1,0 +1,10 @@
+
+T = regexp('John Nash, Saint Paul, John Peter','Joh?n\s(\w+)','tokens')
+
+T = regexp('John Nash, Saint Paul, John Peter','Joh?n\s(\w+)','tokens')
+
+T = regexp('John','Joh?n\s(\w*)','tokens')
+
+T = regexp('John, John Nash','Joh?n\s(\w*)','tokens')
+
+T = regexp('Regular expression','\<(\w)(\w)(\w*)','tokens') 

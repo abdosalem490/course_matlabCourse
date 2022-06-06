@@ -1,0 +1,7 @@
+% ---- Put this code in teh opening function ----% 
+% --- Do not forget to run the code from command line ---- %
+a = varargin(1); 
+b = varargin(2); 
+set(handles.edit1,'String',num2str(a)); 
+set(handles.edit2,'String',num2str(b)); 
+

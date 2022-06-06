@@ -1,0 +1,6 @@
+% ----- Put this code in the callback of push button ---- %
+
+L = get(handles.listbox1,{'string','value'});
+newstring = get(handles.text1,'string');
+L{1}{end+1} = newstring;
+set(handles.listbox1,'string',L{1});

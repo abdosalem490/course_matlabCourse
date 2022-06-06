@@ -1,0 +1,20 @@
+% --------- Code for the button of 0 ------- %
+% --------- Apply simillar to code to -------%
+% --------- the rset of the buttons ---------%
+
+existingstring = get(handles.text1,'string');
+newstring = ('0');
+textstring = strcat(existingstring,newstring);
+set(handles.text1,'string',textstring);
+
+% --------- Code for the clear button ------- %
+
+existingstring = get(handles.text1,'string');
+newstring = ('');
+set(handles.text1,'string',newstring);
+
+% --------- Code for the equality button ------- %
+
+existingstring = get(handles.text1,'string');
+result = eval(existingstring);
+set(handles.text1,'string',result);

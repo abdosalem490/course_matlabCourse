@@ -1,0 +1,20 @@
+% ---- Scenario: saving all the work space variable which may be of
+% interest tomorrom morning to me
+% You will need to setup the default working directory by right clicking on
+% the matlab shortcut -> properties -> start in provide the path 
+
+answer = questdlg('Would you like to save the workspace variables ?', ...
+	'Answer this before closing', ...
+	'Yes','No','YES'); 
+
+if isequal(answer,'Yes')
+    current_date = datetime('now');
+    day_information = char(datetime(current_date, 'format','dd-MMM-yyyy')); 
+    save(day_information); 
+end 
+
+
+
+
+
+

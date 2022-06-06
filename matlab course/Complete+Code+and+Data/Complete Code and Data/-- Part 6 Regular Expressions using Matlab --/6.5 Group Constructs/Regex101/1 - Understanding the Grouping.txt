@@ -1,0 +1,15 @@
+
+regex: Joh?n\s(\w+)
+string: John Nash, Saint Paul, John Peter
+
+regex: Joh?n\s(\w+)
+string: John Nash, Saint Paul, John Peter
+
+regex: Joh?n\s(\w*)
+string: John
+
+regex: Joh?n\s(\w*)
+string: John, John Nash
+
+regex: \<(\w)(\w)(\w*) 
+string: Regular expression

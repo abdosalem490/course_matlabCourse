@@ -1,0 +1,23 @@
+% ----- Put this code in the callback of pushbutton ------ %           
+
+value = app.Slider.Value;
+app.Gauge.Value = value;
+if value > 90 
+	app.Lamp.Color = 'Red';
+else 
+	app.Lamp.Color = 'Green';
+end
+
+
+
+% ----- Put this code in the callback of Discrete Knob ------ %           
+value  = app.DiscreteKnob.Value; 
+if isequal(value,'Off')
+	app.Gauge.Value = 0;
+elseif isequal(value,'low')
+	app.Gauge.Value = 33;
+elseif isequal(value,'Meduim')
+	app.Gauge.Value = 66;
+else
+	app.Gauge.Value = 100;
+end

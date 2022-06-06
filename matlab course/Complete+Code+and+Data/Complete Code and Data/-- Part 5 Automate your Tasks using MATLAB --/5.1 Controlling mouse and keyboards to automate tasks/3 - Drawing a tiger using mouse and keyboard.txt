@@ -1,0 +1,54 @@
+%% ------------------- Importing Libraries --------------------------------
+
+clear all 
+import java.awt.Robot;
+import java.awt.event.*;
+robot = java.awt.Robot ();
+
+
+%---------- Select paint program from list of open programs --------------
+
+robot.keyPress(KeyEvent.VK_ALT);
+robot.keyPress(KeyEvent.VK_TAB);
+
+C = get(0, 'PointerLocation')
+Paint_loc = [510 407];
+Screen_size = get(0,'screensize'); 
+robot.mouseMove(Paint_loc(1),(Screen_size(4)-Paint_loc(2))+1);
+
+robot.delay (2000);
+
+robot.mousePress(KeyEvent.BUTTON1_MASK);
+robot.mouseRelease(KeyEvent.BUTTON1_MASK); 
+robot.keyRelease(KeyEvent.VK_ALT);
+robot.keyRelease(KeyEvent.VK_TAB);
+
+
+%---------- Moving mouse to the Top right paint area ----------------------
+
+C = get(0, 'PointerLocation')
+Loc_paint = [6 621];
+Screen_size = get(0,'screensize'); 
+robot.mouseMove(Loc_paint(1),(Screen_size(4)-Loc_paint(2))+1);
+
+%---------- Reading image of tiger face and convert to black/white --------
+
+image = imread('D:\Tiger1.jpg');
+[rows columns colors] = size(image); 
+image1 = im2bw(image);
+imshow(image1)
+
+%---------- Draw the tiger face in paint brush ----------------------------
+for i=1:rows
+    for j=1:columns
+        if image1(i,j) == 0
+            robot.delay(2.5);
+            robot.mousePress(KeyEvent.BUTTON1_MASK);
+            robot.mouseRelease(KeyEvent.BUTTON1_MASK);
+            robot.mouseMove(Loc_paint(1)+j,(Screen_size(4)-Loc_paint(2))+1+i);
+        end 
+    end
+
+end 
+
+

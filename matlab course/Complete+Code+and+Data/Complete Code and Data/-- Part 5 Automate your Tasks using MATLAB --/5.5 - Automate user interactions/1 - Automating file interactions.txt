@@ -1,0 +1,37 @@
+% ----- Saving a file to a user specified space ------- 
+% Scenario Before closing of a script, i want to save the current version
+% of the program to a directory and i would also like to name it
+% approperiately. 
+
+
+[filename, pathname] = uiputfile('.m', 'Save the file as');
+    if ischar(pathname)
+       copyfile('current_file.m', fullfile(pathname, filename))
+    else 
+       fprintf('The user pushed cancel and do not want to save')
+    
+    end
+
+% ------ Selecting a direcotry ------- 
+% Another simillar function is the uigetdir. This function however does not
+% return the name of file but rather returns the path name for the selected
+% folder. 
+
+pathname = uigetdir    
+    if ischar(pathname)
+       copyfile('current_file.m', fullfile(pathname, 'todays_work_1.m') % does not allow to interactively set the file name
+    else 
+       disp('The user pushed cancel and do not want to save')    
+    end
+
+% ------ For opening up of files on the system ----------------
+% --- Scenario i may be interested in opening up certain files assocated
+% with my current .m file. Make sure there are enough .m files in the
+% current folder for the sake of illustration 
+
+
+[file_names,pathname] = uigetfile('.m', 'Select One or More Files', 'MultiSelect', 'on');
+for i =1:length(file_names) 
+    edit(fullfile(pathname,char(file_names(i))))
+end 
+

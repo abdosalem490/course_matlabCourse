@@ -1,0 +1,28 @@
+% ---- Scenario: Loading all the work space variable which may be of
+% interest from yesterday work
+% Please note that the finish.m will only run if it is in the current
+% working directory 
+
+clear all 
+answer = questdlg('Would you like to restore the yesterdays workspace', ...
+    'Choose one please', ...
+    'Yes','No','Yes');
+
+if isequal(answer,'Yes')
+    yesterday_date = datetime('yesterday'); 
+    day_information  = datetime(yesterday_date,'format','dd-MMM-yyyy');
+    
+   [day_number day_name] = weekday(day_information); 
+   if day_name == 'Sun'  
+       day_information  = day_information + days(-2);
+   end 
+   
+   day_information  = char(day_information); 
+   load(day_information); 
+end 
+   
+       
+       
+       
+       
+    

@@ -1,0 +1,26 @@
+>> a = [1 5 8 7 4 5 2 1 4 9 6 45]
+
+>> sort(a) 
+
+>> sort(a,'descend') 
+
+>> [b, b1] = sort(a,'descend')
+
+>> a = [8 7 9 5; 4 5 8 7; 1 2 4 5]
+
+>> sort(a) 
+
+>> sort(a,2)
+
+>> sort(a,2,'descent') 
+
+>> [b b1] = sort(a,2,'descent') 
+
+>> a = [string('hello') string('world') string('Nouman') string('Azam')]
+
+>> sort(a)
+
+>> a = [string('Hello') string('World') string('Nouman') string('azam')]
+
+>> sort(a)
+

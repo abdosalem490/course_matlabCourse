@@ -1,0 +1,8 @@
+% ---- Notes: Save in the current working directory ----- 
+% ---- Notes: save with the same name as that of the function name and with .m extention ----
+
+function print_function()
+	
+disp('Hello this is the starting function');
+
+end

@@ -1,0 +1,12 @@
+>> input('Please neter a number'); 
+
+>> x = input('P{lease enter a number'); 
+
+>> x = input('Please enter a number','s'); 
+
+>> disp('Nouman Azam'); 
+
+>> a = 10
+
+>> disp(a)
+

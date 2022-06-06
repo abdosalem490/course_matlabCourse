@@ -1,0 +1,9 @@
+% ----- Put this code in the callback of pushbutton ------ %
+
+value = app.Slider.Value;
+x = 0:0.1:50
+y = sin(value*x);
+plot(app.UIAxes,x,y);
+
+% To view the value of the slider add the following 
+app.NumericEditField.Value = value;

@@ -1,0 +1,50 @@
+%Scernario: given a search term. Open google and then try different searches of the combinations of the given word 
+and return all search results. Then find the most frequent terms and then make a useful analysis chart of all the 
+relevant and top scoring papers based on citations. 
+
+clear all 
+
+search_term = input('Input your search term','s'); 
+tokenized_search_term = tokenizedDocument(search_term); 
+words = tokenized_search_term.Vocabulary; 
+permutations = perms(1:length(words)); 
+
+[rows,col] = size(permutations);
+
+for i=1:rows
+    terms_to_search(i) = join(words(permutations(i,1:col)));
+    terms_to_search(i) = replace(terms_to_search(i)," ","+")
+end 
+    
+    
+
+Titles = string(); 
+Citations = [0]; 
+information = table(Titles,Citations); 
+d = 0;
+
+for z=1:length(terms_to_search)
+    string_to_search = strcat('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=',terms_to_search(z),'&btnG='); 
+
+    HTML_result = webread(string_to_search);
+    Text = extractHTMLText(HTML_result);  
+    Text = string(Text);    
+    Text = split(Text,newline); 
+    k = strfind(Text,'Cited by ');
+
+
+    for i=1:length(Text)
+        if isempty(k{i})
+            continue; 
+        else
+            d = d+1;
+            [start_ind ending_ind] = regexp(Text(i),'Cited\sby\s\d*');
+            information.Citations(d) =  extractBetween(Text(i),start_ind+9,ending_ind); 
+            information.Titles(d) = Text(i-8); 
+        end 
+    end
+end 
+
+
+ 
+ 

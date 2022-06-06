@@ -1,0 +1,25 @@
+>> x = [5 9 8; 4 5 6; 8 7 9]
+
+>> ismember(5,x)
+
+>> ismember(1,x)
+
+>> ismember(x,5) 
+
+>> a = [4 5 6]
+
+>> ismember(a,x)
+
+>> [C ia] = ismember(a,x)
+
+>> [C ia] = ismember([5 9 8],x,'rows')
+
+>> [C ia] = ismember([5 9 8],x(1:2,:),'rows')
+
+>> y = [5 9 8]
+
+>> isequal(x,y) 
+
+>> isequal(x(1,:),y) 
+
+>> isequal(x(1,:),y,x(1,:))

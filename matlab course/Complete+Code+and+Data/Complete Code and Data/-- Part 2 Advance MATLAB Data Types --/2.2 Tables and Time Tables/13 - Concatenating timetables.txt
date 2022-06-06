@@ -1,0 +1,13 @@
+%---- Note: The timetable Ourtimetable has been defined based on the commands in the previous tutorial ---- 
+
+>> [Ourtimetable;Ourtimetable]
+
+>> Ourtimetable2 = Ourtimetable
+
+>> Ourtimetable2.Properties.VariableNames = {'Var1','Var2','Var3'}
+
+>> [Ourtimetable Ourtimetable2]
+
+>> Ourtimetable2.Properties.VariableNames{'Var1'} = 'Timestmps'
+
+>> synchronize(Ourtimetable, Ourtimetable2) 

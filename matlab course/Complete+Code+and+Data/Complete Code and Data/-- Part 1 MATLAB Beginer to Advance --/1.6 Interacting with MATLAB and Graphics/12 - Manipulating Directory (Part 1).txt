@@ -1,0 +1,22 @@
+>> dir 
+
+>> dir *.m
+
+>> dir */*.m 
+
+>> dir **/*.m
+
+>> dir *f.m
+
+>> dir *f*.m 
+
+>> y = dir 
+
+>> y(3) 
+
+>> y(4) 
+
+>> y(4).folder 
+
+>> y = dir('html'); 
+

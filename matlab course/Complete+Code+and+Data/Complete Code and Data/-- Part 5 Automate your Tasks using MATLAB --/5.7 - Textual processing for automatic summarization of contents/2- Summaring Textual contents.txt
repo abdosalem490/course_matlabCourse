@@ -1,0 +1,63 @@
+%Note: Scenario 2: I do not have have time and i want to have some idea as 
+% to what a particular pdf file is about so i will do it using the lda  
+
+
+%---- Reading the document ------- 
+clear all 
+filename = 'D:\PhD students\M.Khan\J. Paper 2\elsarticle-template.pdf'; 
+str = extractFileText(filename);
+
+%---- tokenizing the document ------- 
+textData = split(str,newline);
+documents = tokenizedDocument(textData);
+
+
+%---- Preprocessing the document ------- 
+documents = erasePunctuation(documents); 
+documents = normalizeWords(documents);
+documents = removeStopWords(documents); 
+documents = removeShortWords(documents,2);
+documents = removeLongWords(documents,15);
+
+%---- Bag of words Representation ------- 
+bag = bagOfWords(documents);
+bag = removeInfrequentWords(bag,2); 
+bag = removeEmptyDocuments(bag);
+
+%---- Applying topic models ------------- 
+mdl = fitlda(bag,4,'Verbose',0);
+
+tbl = topkwords(mdl,10,4); 
+
+
+
+%---- Visualizing Topic Models ----------- 
+figure;
+for i = 1:4
+    subplot(2,2,i)
+    wordcloud(mdl,topicIdx);
+    title("Topic " + i)
+end
+
+
+
+
+
+
+
+%Note: Scenario 3: summarizing using the extract summary function
+
+%---- Reading the document ------- 
+clear all 
+filename = 'D:\PhD students\M.Khan\J. Paper 2\elsarticle-template.pdf'; 
+str = extractFileText(filename);
+
+%---- tokenizing the document -------
+textData = splitSentences(str)
+%textData = split(str,newline);
+sentences = tokenizedDocument(textData);
+
+
+summary = extractSummary(sentences,'SummarySize',0.1,'ScoringMethod','textrank','OrderBy','score'); 
+
+writeTextDocument(summary,'D:\summary_of_file.docx'); 

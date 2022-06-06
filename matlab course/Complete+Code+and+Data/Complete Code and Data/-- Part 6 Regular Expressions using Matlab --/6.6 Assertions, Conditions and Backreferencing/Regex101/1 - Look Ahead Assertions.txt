@@ -1,0 +1,15 @@
+
+regex: \w*(?=ing)
+string: The following animal are capable of flying
+
+regex: \d+\s(?=USD)
+string: 100 USD, 75 USD, 22000 JPY, 9000 PKR, 500 USD
+
+regex: (\d+)(?:\s)(?=USD)
+string: 100 USD, 75 USD, 22000 JPY, 9000 PKR, 500 USD
+
+regex: q(?!u)
+string: quit
+
+regex: q(?=u)it
+string: quit

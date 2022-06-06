@@ -1,0 +1,7 @@
+% --- put this code in the  callback of push button of gui2 ---%
+
+h = findobj('Tag','Gui1'); 
+if ~isempty(h) 
+	gui_data = guidata(h);
+	set(handles.edit1,'String',get(gui1_data.edit1,'String'));
+end

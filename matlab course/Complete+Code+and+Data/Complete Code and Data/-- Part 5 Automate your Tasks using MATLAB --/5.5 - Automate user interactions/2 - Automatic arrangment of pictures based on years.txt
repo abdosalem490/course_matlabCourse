@@ -1,0 +1,30 @@
+clear all 
+[file_names,pathname_of_pics] = uigetfile('*.jpg', 'Select One or More Files', 'MultiSelect', 'on');
+
+% ---------- Select the target folder where i want to move all the files 
+pathname_dest = uigetdir    
+    if ~ischar(pathname_dest)
+       disp('The user pushed cancel and do not want to save');
+       return;    
+    end
+
+% ------ Move files to the target folder and arrange into sub folder based on year.
+
+if ~ischar(pathname_of_pics)
+    disp('You did not selected any images'); 
+    return
+else
+    files_in_dir = dir(pathname_of_pics); 
+    for i=3:length(files_in_dir)           
+            year_of_pic = char(datetime(files_in_dir(i).date,'format','yyyy')); 
+    
+            if ~isfolder(fullfile(pathname_dest,year_of_pic))
+                mkdir(fullfile(pathname_dest,year_of_pic)); 
+            end
+             copyfile(fullfile(pathname_of_pics,files_in_dir(i).name),fullfile(pathname_dest,year_of_pic));   
+    end
+    
+end
+
+              
+        

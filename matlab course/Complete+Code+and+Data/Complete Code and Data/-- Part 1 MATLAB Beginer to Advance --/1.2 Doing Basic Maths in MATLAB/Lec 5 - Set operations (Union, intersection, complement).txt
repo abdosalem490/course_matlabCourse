@@ -1,0 +1,19 @@
+>> x = [5 9 8; 4 5 6;8 7 9]
+
+>> y = [5 9 8 10 11]
+
+>> intersect(x,y)
+
+>> [C,ia] = intersect(x,y) 
+
+>> [a,b] = intersect(x,y,'rows')
+
+>> z = [5 9 8]
+
+>> [a,b] = intersect(x,z)
+
+>> union(x,y) 
+
+>> union(x,z, 'rows')
+
+>> setdiff(x,z,'rows')  

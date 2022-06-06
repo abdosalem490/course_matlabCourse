@@ -1,0 +1,20 @@
+% ------ Example: 1 -------
+
+i = i + 1;
+C = logical(1);
+fprintf('Please enter the marks in percentage for the students\n'); 
+
+while C
+	fprintf('Please enter the student marks \n'); 
+	grades(i) = input('');
+	i = i + 1;	
+	fprintf('Do you want to enter another student data [Y/N] \n'); 
+	c = input('','s'); 
+	
+	if c == 'Y' 
+		C = 1;
+	else
+		C = 0; 
+	end
+			
+end 

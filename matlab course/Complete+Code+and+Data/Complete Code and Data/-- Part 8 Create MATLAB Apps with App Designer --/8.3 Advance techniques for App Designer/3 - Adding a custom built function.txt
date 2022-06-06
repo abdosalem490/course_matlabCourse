@@ -1,0 +1,28 @@
+%--- example 1 --- 
+
+% ---- create this function as a private function 
+
+function results = mycal (app) 
+a = app.Field1.Value; 
+b = app.Field1.Value; 
+sum_result = a+b; 
+prod_result = a*b;
+app.sum.Value = sum_result; 
+app.product.Value = prod_result;
+
+
+%---- in the Field1 value change function --- 
+mycal(app)  
+
+
+%--- example 2--- 
+
+%----- create a function as a public and also a variable named as result as publich also ----- 
+function create(app, b)
+app.result = b; 
+
+% in the callback of a push button write the code below 
+app.Field.Value = result
+
+% from the command line 
+create(app1,5)    % app1 is the name of the gui 

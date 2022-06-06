@@ -1,0 +1,17 @@
+% ----- Put this code in the callback of new (menu item) ---- %
+
+[filename, pathname] = uigetfile({'*.png'}, 'Pick a MATLAB code file');
+    if isequal(filename,0) || isequal(pathname,0)
+       disp('User pressed cancel')
+    else
+	image = imread(strcat(pathname,filename));
+	imshow(image);
+    end
+
+
+
+
+% ---- if you want the axes to contain the image than instead of imshow(image) add this line --%
+% ----------- to the callback of the new (menu item) ---------%
+
+axes1 = imshow(image);

@@ -1,0 +1,12 @@
+
+regexp('Hi my name is nouman','\<.','match')
+
+regexp('Hi my name is nouman','.\>','match') 
+
+regexp('Hi m(y name is nouman','.\>','match') 
+
+regexp('Hi my name is nouman','\>.','match') 
+
+regexp('Hi m(y name is nouman','.\<','match')
+
+regexp('Hi m(y name is nouman','.\<\w*\>','match')

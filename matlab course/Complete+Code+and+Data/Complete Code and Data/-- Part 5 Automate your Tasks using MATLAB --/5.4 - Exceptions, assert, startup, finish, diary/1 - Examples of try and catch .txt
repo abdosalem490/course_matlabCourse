@@ -1,0 +1,51 @@
+% ---- Scenario 1: Automating the programs not to stop in case of errors 
+% ---- if we do not have try and and catch the program will execute till line 5 in the absence of try and catch 
+% ---- With the try and catch we are able to run the code completely
+
+dividing_numbers(12,6);
+dividing_numbers("six","four");
+dividing_numbers(12,3);
+dividing_numbers(12);
+
+function dividing_numbers(a,b)
+    fprintf('The division of first number by the second number is %d \n\n',a/b); 
+end 
+
+
+function dividing_numbers(a,b)
+
+try
+    fprintf('The division of first number by the second number is %d \n\n',a/b); 
+    
+catch ME
+    disp('Error Message:')
+    disp(ME.message)
+    fprintf('\n\n');
+end
+end 
+
+
+% -------- Scenario 2: Reading a file which does not exist -------- 
+% Rather then throwing an error message, i would like to tell it that
+% please select approperiate files from the system as i am not able to find
+% the file you provided as input  
+
+try
+    data = readtable('D:\Online Courses\Beyound Basic programming in MATLAB\4 - Exception handling and assert\code and data\data_1.csv'); 
+
+catch ME
+    fprintf('You did not selected an approxiperiate file \n');
+    choice = input('Would you like to indicate a correct file using file browswer (Y/N)\n','s'); 
+    if choice == 'Y'
+        [filename pathname] = uigetfile({'*.csv'},'File Selector');
+        data = readtable(strcat(pathname,filename));
+
+    else 
+        fprintf('The pogram can not continue'); 
+        exit % better to use the return statement which will not force matlab to quit
+    end 
+    
+end 
+
+    fprintf('The mean age in your dataset is %d while the standard deviation is %d \n', mean(data.Age), std(data.Age));
+    

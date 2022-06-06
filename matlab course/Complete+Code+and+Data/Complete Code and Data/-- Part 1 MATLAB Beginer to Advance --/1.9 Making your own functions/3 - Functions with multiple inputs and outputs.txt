@@ -1,0 +1,20 @@
+% ---- Notes: Save in the current working directory ----- 
+% ---- Notes: save with the same name as that of the function name and with .m extention ----
+
+function [standard_dev, variance, minimum, maximum] = statistics_of_data(a,b) 
+
+d = [a;b]; 
+standard_dev = std(d);
+variance = var(d);
+mininum = min(d);
+maximum = max(d);
+
+end 
+
+
+% ---- Notes: put the code below in a new script ---- 
+
+n = rand(4); 
+m = rand(4); 
+[a,b,c,d] = statistics_of_data(n,m);
+ 

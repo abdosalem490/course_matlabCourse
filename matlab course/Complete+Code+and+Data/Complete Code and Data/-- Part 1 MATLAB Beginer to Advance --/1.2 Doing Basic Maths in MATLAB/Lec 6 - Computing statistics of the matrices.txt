@@ -1,0 +1,48 @@
+>> a = [5 8 9;8 7 9;1 2 3]
+
+>> min(a)
+
+>> min(a')
+
+>> min(a, [], 2)
+
+>> min(a, [], 1)
+
+>>  [M, I] = min(a, [], 2)
+
+>> max(a)
+
+>> max(a,[],2)
+
+>> [M,I] = max(a)
+
+>> [m,I]= max(a,[],2)
+
+>> mean(a)
+
+>> mean(a,2)
+
+>> var(a)
+
+>> std(a)
+
+>> std(a') 
+
+>> sum(a)
+
+>> sum(a')
+
+>> median(a)
+
+>> prctile(a,25) 
+
+>> prctile(a,[25 42])
+
+>> prctile(a, [25 42], 2)
+
+>> mode(a)
+
+>> min(min(a))
+
+
+

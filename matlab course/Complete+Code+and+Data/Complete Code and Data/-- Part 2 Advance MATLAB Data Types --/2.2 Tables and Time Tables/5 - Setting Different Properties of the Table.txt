@@ -1,0 +1,7 @@
+>> T.Properties.DimensionNames = {'Students' 'Data'}
+
+>> T.Properties
+
+>> T.Properties.Description = 'This table contain information about the students ....'
+
+>> summary(T)

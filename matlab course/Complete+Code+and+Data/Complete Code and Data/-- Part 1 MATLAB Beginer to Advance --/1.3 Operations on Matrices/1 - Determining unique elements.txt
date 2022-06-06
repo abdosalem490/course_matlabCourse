@@ -1,0 +1,15 @@
+>> x = [5 9 8; 4 5 6; 7 8 9]
+
+>> y = unique(x)
+
+>> y = unique(x(1:2,:))
+
+>> y = unique(x(:,1:2))
+
+>> [c, ia] = unique(x)
+
+>> [c ia ib] = unique(x)
+
+>> x = [x; 5 9 8]
+
+>> unique(x,'rows')

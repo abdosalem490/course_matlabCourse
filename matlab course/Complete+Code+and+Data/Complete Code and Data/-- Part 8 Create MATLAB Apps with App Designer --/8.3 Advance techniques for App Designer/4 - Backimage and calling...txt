@@ -1,0 +1,8 @@
+% ----- write the following code in a plain script ---- 
+x = input('For app 1, please enter 1 and for app 2 please enter 2'); 
+
+if x == 1
+	App1 
+else 
+	App2
+end 

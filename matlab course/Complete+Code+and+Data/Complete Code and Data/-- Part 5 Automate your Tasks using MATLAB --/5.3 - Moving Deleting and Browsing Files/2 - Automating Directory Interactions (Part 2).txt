@@ -1,0 +1,30 @@
+>> cd ../
+
+>> dir 
+
+>> cd ../
+
+>> cd ./R2016b 
+
+>> cd ./bin
+
+>> mkdir result3
+
+>> cd ./result3 
+
+>> cd ../ 
+
+>> rmdir result3
+
+>> rmdir result1 
+
+>> rmdir('results1','s'); 
+
+>> movefile data.csv results2 
+
+>> what results2 
+
+>> what html 
+
+
+

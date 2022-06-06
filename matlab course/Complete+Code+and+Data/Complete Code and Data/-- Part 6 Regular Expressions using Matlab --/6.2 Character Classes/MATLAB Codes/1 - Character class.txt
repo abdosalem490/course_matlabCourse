@@ -1,0 +1,19 @@
+
+regexp('rain','[prt]ain','match')
+
+regexp('tain','[prt]ain','match')
+
+regexp('pain','[prt]ain','match')
+
+regexp('prain','[prt]ain','match')
+
+regexp('It is raining and in am on train','[prt]ain','match')
+
+regexp('gray','gr[ae]y','match')
+
+regexp('grey','gr[ae]y','match')
+
+
+
+
+

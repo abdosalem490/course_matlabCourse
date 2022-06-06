@@ -1,0 +1,17 @@
+Step 1: click on the file or excel icon at the right top and then click on the excel options. 
+
+Step 2: Another window will appear with many options. 
+
+Step 3: Next select the addins. This will display the list of different addin features for the excel, 
+
+Step 4: Click on the go button. This will open up another window. 
+
+Step 5: Click browse, and next you need to go to your Matlab directory that is the directory where you have installed the matlab software. 
+
+STep 6: Next select the toolboxes folder. 
+
+Step 7: Next you need to select the folder for the spreed sheet link feature. Remember, that when ever you install the matlab, so there are some toolboxes which are installed without any additional charges and there are others which you have to buy. If your obtaining your copy of matlab from a university or some company than probably it will have the feature already there. In summary, if there is a folder with a name of exlink in your toolboxes, it is an indication that the feature of spread sheet link is available and if it is absent than it is not included in your copy and you need to buy it. 
+
+Step 8: Next, just click the folder of exlink and there will be one file in it, so select it. 
+
+Step 9: Complete the remaining installation

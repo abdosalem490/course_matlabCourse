@@ -1,0 +1,30 @@
+
+regex: a?aa
+string: aa
+
+regex: a?aa
+string: aaa
+
+regex: ba?
+string: a ab b ba
+
+regex: \w?\w?\.m
+string: .m
+
+regex: \w?\w?\.m
+string: a.m
+
+regex: \w?\w?\.m
+string: ab.m
+
+regex: \w?\w?\.m
+string: abc.m
+
+regex: a+ 
+string: a aa aaa aaaa baab bab
+
+regex: \w+\.gif
+string: image1.gif and background.gif
+
+regex: ab*
+string: a ab abbbb     (There is a space at the end of the string)

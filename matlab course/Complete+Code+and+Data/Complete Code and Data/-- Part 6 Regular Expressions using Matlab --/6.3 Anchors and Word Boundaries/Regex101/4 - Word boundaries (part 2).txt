@@ -1,0 +1,15 @@
+
+regex: .\b 
+string: Hi my name is nouman
+
+regex: \b. 
+string: Hi my name is nouman
+
+regex: \b\w* 
+string: Hi my name is nouman
+
+regex: \b\w*\b 
+string: Hi my name is nouman
+
+regex: \B. 
+string: Hi my name is nouman

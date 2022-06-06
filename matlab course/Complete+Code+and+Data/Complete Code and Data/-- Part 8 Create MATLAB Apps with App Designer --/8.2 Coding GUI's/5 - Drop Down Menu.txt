@@ -1,0 +1,13 @@
+% ----- Put this code in the callback of pushbutton ------ %           
+
+value = app.DropDown.Value      
+x = 0.0:0.01:50;
+y = sin(x);
+if value == 'Option 1'
+	scatter(app.UIAxes,x,y);
+end 
+
+if value == 'Option 2'
+	plot(app.UIAxes,x,y);
+	
+end 

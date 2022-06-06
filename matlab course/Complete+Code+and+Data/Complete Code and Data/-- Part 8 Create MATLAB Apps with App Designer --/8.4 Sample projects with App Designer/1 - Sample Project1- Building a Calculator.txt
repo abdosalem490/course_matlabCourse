@@ -1,0 +1,321 @@
+classdef App1 < matlab.apps.AppBase
+
+    % Properties that correspond to app components
+    properties (Access = public)
+        UIFigure        matlab.ui.Figure
+        One             matlab.ui.control.Button
+        five            matlab.ui.control.Button
+        nine            matlab.ui.control.Button
+        multiplication  matlab.ui.control.Button
+        two             matlab.ui.control.Button
+        six             matlab.ui.control.Button
+        zero            matlab.ui.control.Button
+        division        matlab.ui.control.Button
+        Three           matlab.ui.control.Button
+        seven           matlab.ui.control.Button
+        subtraction     matlab.ui.control.Button
+        clear           matlab.ui.control.Button
+        four            matlab.ui.control.Button
+        eight           matlab.ui.control.Button
+        addition        matlab.ui.control.Button
+        equality        matlab.ui.control.Button
+        EditField       matlab.ui.control.EditField
+    end
+
+    methods (Access = private)
+
+        % Button pushed function: One
+        function OnePushed(app, event)
+            Existingstring = app.EditField.Value; 
+            newstring = ('1');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: two
+        function twoButtonPushed(app, event)
+            Existingstring = app.EditField.Value; 
+            newstring = ('2');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: Three
+        function ThreeButtonPushed(app, event)
+            Existingstring = app.EditField.Value; 
+            newstring = ('3');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: four
+        function fourButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('4');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: five
+        function fiveButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('5');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: six
+        function sixButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('6');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: seven
+        function sevenButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('7');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: eight
+        function eightButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('8');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: nine
+        function nineButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('9');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: zero
+        function zeroButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('0');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: subtraction
+        function subtractionButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('-');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: addition
+        function additionButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('+');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: multiplication
+        function multiplicationButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('*');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: division
+        function divisionButtonPushed(app, event)
+                        Existingstring = app.EditField.Value; 
+            newstring = ('/');
+            textstring = strcat(Existingstring,newstring);
+            app.EditField.Value = textstring;
+        end
+
+        % Button pushed function: clear
+        function clearButtonPushed(app, event)
+            app.EditField.Value = ('');
+        end
+
+        % Button pushed function: equality
+        function equalityButtonPushed(app, event)
+            Existingstring = app.EditField.Value; 
+            result = eval(Existingstring);
+            app.EditField.Value = num2str(result);
+        end
+    end
+
+    % App initialization and construction
+    methods (Access = private)
+
+        % Create UIFigure and components
+        function createComponents(app)
+
+            % Create UIFigure
+            app.UIFigure = uifigure;
+            app.UIFigure.Position = [100 100 640 480];
+            app.UIFigure.Name = 'UI Figure';
+            setAutoResize(app, app.UIFigure, true)
+
+            % Create One
+            app.One = uibutton(app.UIFigure, 'push');
+            app.One.ButtonPushedFcn = createCallbackFcn(app, @OnePushed, true);
+            app.One.FontSize = 14;
+            app.One.FontWeight = 'bold';
+            app.One.Position = [55 376 45 32];
+            app.One.Text = '1';
+
+            % Create five
+            app.five = uibutton(app.UIFigure, 'push');
+            app.five.ButtonPushedFcn = createCallbackFcn(app, @fiveButtonPushed, true);
+            app.five.FontSize = 14;
+            app.five.FontWeight = 'bold';
+            app.five.Position = [55 340 45 32];
+            app.five.Text = '5';
+
+            % Create nine
+            app.nine = uibutton(app.UIFigure, 'push');
+            app.nine.ButtonPushedFcn = createCallbackFcn(app, @nineButtonPushed, true);
+            app.nine.FontSize = 14;
+            app.nine.FontWeight = 'bold';
+            app.nine.Position = [55 304 45 32];
+            app.nine.Text = '9';
+
+            % Create multiplication
+            app.multiplication = uibutton(app.UIFigure, 'push');
+            app.multiplication.ButtonPushedFcn = createCallbackFcn(app, @multiplicationButtonPushed, true);
+            app.multiplication.FontSize = 14;
+            app.multiplication.FontWeight = 'bold';
+            app.multiplication.Position = [55 268 45 32];
+            app.multiplication.Text = '*';
+
+            % Create two
+            app.two = uibutton(app.UIFigure, 'push');
+            app.two.ButtonPushedFcn = createCallbackFcn(app, @twoButtonPushed, true);
+            app.two.FontSize = 14;
+            app.two.FontWeight = 'bold';
+            app.two.Position = [107 376 45 32];
+            app.two.Text = '2';
+
+            % Create six
+            app.six = uibutton(app.UIFigure, 'push');
+            app.six.ButtonPushedFcn = createCallbackFcn(app, @sixButtonPushed, true);
+            app.six.FontSize = 14;
+            app.six.FontWeight = 'bold';
+            app.six.Position = [107 340 45 32];
+            app.six.Text = '6';
+
+            % Create zero
+            app.zero = uibutton(app.UIFigure, 'push');
+            app.zero.ButtonPushedFcn = createCallbackFcn(app, @zeroButtonPushed, true);
+            app.zero.FontSize = 14;
+            app.zero.FontWeight = 'bold';
+            app.zero.Position = [107 304 45 32];
+            app.zero.Text = '0';
+
+            % Create division
+            app.division = uibutton(app.UIFigure, 'push');
+            app.division.ButtonPushedFcn = createCallbackFcn(app, @divisionButtonPushed, true);
+            app.division.FontSize = 14;
+            app.division.FontWeight = 'bold';
+            app.division.Position = [107 268 45 32];
+            app.division.Text = '/';
+
+            % Create Three
+            app.Three = uibutton(app.UIFigure, 'push');
+            app.Three.ButtonPushedFcn = createCallbackFcn(app, @ThreeButtonPushed, true);
+            app.Three.FontSize = 14;
+            app.Three.FontWeight = 'bold';
+            app.Three.Position = [161 375 45 32];
+            app.Three.Text = '3';
+
+            % Create seven
+            app.seven = uibutton(app.UIFigure, 'push');
+            app.seven.ButtonPushedFcn = createCallbackFcn(app, @sevenButtonPushed, true);
+            app.seven.FontSize = 14;
+            app.seven.FontWeight = 'bold';
+            app.seven.Position = [161 339 45 32];
+            app.seven.Text = '7';
+
+            % Create subtraction
+            app.subtraction = uibutton(app.UIFigure, 'push');
+            app.subtraction.ButtonPushedFcn = createCallbackFcn(app, @subtractionButtonPushed, true);
+            app.subtraction.FontSize = 14;
+            app.subtraction.FontWeight = 'bold';
+            app.subtraction.Position = [161 303 45 32];
+            app.subtraction.Text = '-';
+
+            % Create clear
+            app.clear = uibutton(app.UIFigure, 'push');
+            app.clear.ButtonPushedFcn = createCallbackFcn(app, @clearButtonPushed, true);
+            app.clear.FontSize = 14;
+            app.clear.FontWeight = 'bold';
+            app.clear.Position = [161 267 45 32];
+            app.clear.Text = 'C';
+
+            % Create four
+            app.four = uibutton(app.UIFigure, 'push');
+            app.four.ButtonPushedFcn = createCallbackFcn(app, @fourButtonPushed, true);
+            app.four.FontSize = 14;
+            app.four.FontWeight = 'bold';
+            app.four.Position = [217 374 45 32];
+            app.four.Text = '4';
+
+            % Create eight
+            app.eight = uibutton(app.UIFigure, 'push');
+            app.eight.ButtonPushedFcn = createCallbackFcn(app, @eightButtonPushed, true);
+            app.eight.FontSize = 14;
+            app.eight.FontWeight = 'bold';
+            app.eight.Position = [217 338 45 32];
+            app.eight.Text = '8';
+
+            % Create addition
+            app.addition = uibutton(app.UIFigure, 'push');
+            app.addition.ButtonPushedFcn = createCallbackFcn(app, @additionButtonPushed, true);
+            app.addition.FontSize = 14;
+            app.addition.FontWeight = 'bold';
+            app.addition.Position = [217 302 45 32];
+            app.addition.Text = '+';
+
+            % Create equality
+            app.equality = uibutton(app.UIFigure, 'push');
+            app.equality.ButtonPushedFcn = createCallbackFcn(app, @equalityButtonPushed, true);
+            app.equality.FontSize = 14;
+            app.equality.FontWeight = 'bold';
+            app.equality.Position = [217 266 45 32];
+            app.equality.Text = '=';
+
+            % Create EditField
+            app.EditField = uieditfield(app.UIFigure, 'text');
+            app.EditField.Position = [55 423 207 22];
+        end
+    end
+
+    methods (Access = public)
+
+        % Construct app
+        function app = App1()
+
+            % Create and configure components
+            createComponents(app)
+
+            % Register the app with App Designer
+            registerApp(app, app.UIFigure)
+
+            if nargout == 0
+                clear app
+            end
+        end
+
+        % Code that executes before app deletion
+        function delete(app)
+
+            % Delete UIFigure when app is deleted
+            delete(app.UIFigure)
+        end
+    end
+end

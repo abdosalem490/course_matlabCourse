@@ -1,0 +1,11 @@
+>> C = {} 
+
+>> C = cell(4,6)
+
+>> C = cell(4,6,2)
+
+>> C = {1,2,3: 'text', rand(5,2,3), 'mycell'}
+
+>> cellplot(C) 
+
+>> celldisp(C)  

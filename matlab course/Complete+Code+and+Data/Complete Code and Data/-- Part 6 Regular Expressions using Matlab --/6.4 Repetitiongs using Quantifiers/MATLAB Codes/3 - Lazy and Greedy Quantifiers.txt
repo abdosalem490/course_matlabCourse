@@ -1,0 +1,22 @@
+
+regexp: <.+> 
+string: <EM>first</EM>
+
+regexp: <.+?> 
+string: <EM>first</EM>
+
+regexp: a.*a  
+string: Loins can be dangerous at times
+
+regexp: a.*?  
+string: Loins can be dangerous at times
+
+regexp: a.+?  
+string: Loins can be dangerous at times
+
+regexp('toronto','o\w*o  
+string: 
+
+regexp('toronto','o\w*?o  
+string: 
+

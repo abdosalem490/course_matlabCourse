@@ -1,0 +1,24 @@
+>> student = struct('dateofbirth','','Age',{},'Grades',{})
+
+>> student(1).dateofbirth = '2000-12-5'
+
+>> student(1).Age = 17
+
+>> student(1).Grades = 80
+
+>> student(2).Grades = 90
+
+>> student(2).dateofbirth = '1999-6-6'
+
+>> student(2).Age = 18
+
+>> student(2)
+
+>> student(1) 
+
+>> student(1:2).dateofbirth
+
+>> student(1:2).Age
+
+>> student(1).dateofbirth(1:4)
+

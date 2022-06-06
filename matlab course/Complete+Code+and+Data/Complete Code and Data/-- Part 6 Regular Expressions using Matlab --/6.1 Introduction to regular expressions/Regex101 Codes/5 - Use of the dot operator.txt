@@ -1,0 +1,15 @@
+
+regex: .a
+string: tain and pain
+
+regex: .a
+string: ain and pain
+
+regex: .a
+string: a
+
+regex: .a
+string: aa 
+
+regex: .a
+string: aaa

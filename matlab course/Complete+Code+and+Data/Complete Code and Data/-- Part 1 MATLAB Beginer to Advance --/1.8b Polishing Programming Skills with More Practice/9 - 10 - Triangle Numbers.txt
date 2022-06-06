@@ -1,0 +1,37 @@
+clear all 
+%Step 1: Input a word
+str = input('Input a word to check \n','s'); 
+
+%Step 2: Computer the word_value 
+alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
+locations = 1:26; 
+letters_presence = ismember(alphabets, str); 
+Word_value = sum(letters_presence.*locations); 
+
+%Step 3: n =1, flag = 0, tn = 1
+n = 1; flag = 0; tn =1; 
+
+%Step 4: repeat until tn <= word_value 
+while tn <= Word_value
+
+    %Step 5: Check if tn is equal to word_value
+    if tn == Word_value
+        
+        %Step 6: flag = 1 and print the word value is a triangle number 
+        flag  = 1;
+        fprintf('The word is a triangle word and is equal to t%d \n',n);    
+        
+    end
+    
+    %Step 7: increment n and compute tn = ½n(n+1)
+    n = n+1;
+    tn = 0.5* (n*(n+1));   
+end
+
+%Step 8: if flag = 0
+if flag == 0
+    
+    %Step 9: Print the word value is not triangle number
+    fprintf('The word is not a triangle word \n');
+end 
+

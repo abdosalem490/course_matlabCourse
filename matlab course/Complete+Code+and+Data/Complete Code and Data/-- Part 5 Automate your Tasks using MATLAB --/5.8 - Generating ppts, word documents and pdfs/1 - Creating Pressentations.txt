@@ -1,0 +1,45 @@
+%% ------------- Adding a title slide -------------------------------------
+clear all 
+import mlreportgen.ppt.*
+ppt = Presentation('D:\myPresentation.pptx');
+
+titleSlide = add(ppt,'Title Slide');    %add(presentation, 'slidelayout') for slide layouts see power point
+
+% when we make an empty presentation you may note that the ppt will 
+% automatically insert things like title so the idea here is to replace 
+% those one by one
+
+replace(titleSlide,'Title','Creating Histoghram Plots');  
+
+%close(ppt); 
+% this will enfore the ppt to be saved and written to hard disk
+% wihtout this command the ppt will not be saved and it will remain in the matlab memory 
+
+Text_of_Subtitle = Paragraph('The ');
+MoreText = Text('histogram');
+
+% for more information please consult this page 
+% https://www.mathworks.com/help/rptgen/ug/mlreportgen.dom.text-class.html
+% The easy way is to write on the commadn window the name of the variable
+% and it will display its different properties that you may set. For
+% instance if i am interested in inspecting the properties of the text, i
+% will write MoreText on command window. 
+
+MoreText.Font = 'Courier New';
+MoreText.FontColor = 'red'; 
+MoreText.FontSize = '18pt';
+MoreText.Bold = 1;
+MoreText.Italic = 1; 
+MoreText.Strike = 'single';
+MoreText.Underline = 'dotted';
+Text_of_Subtitle.HAlign = 'center';
+
+append(Text_of_Subtitle,MoreText);
+append(Text_of_Subtitle,' Function');
+replace(titleSlide,'Subtitle',Text_of_Subtitle);
+close(ppt);    % example 1 is now complete. now let us do something more
+
+% In addition to the above properties some other useful properties of paragraphs are given below 
+% paragraphObj.HAlign = 'center', 'left', 'right', 'justify'
+% paragraphObj.FirstLineIndent = '0.5in' etc 
+% paragraphObj.OuterLeftMargin = '0.5in' etc

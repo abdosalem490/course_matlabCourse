@@ -1,0 +1,12 @@
+
+regex: ^a
+string: abc
+
+regex: c$
+string: abc
+
+regex: ^a
+string: abc ab abc
+ 
+regex: $c
+string: abc ab abc

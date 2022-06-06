@@ -1,0 +1,25 @@
+>> syms x 
+
+>> f = sin(x)^2 
+
+>> diff(f) 
+
+>> syms x y 
+
+>> f = sin(x)^2 + cos(x)^2 
+
+>> diff(f)
+
+>> diff(f,y) 
+
+>> diff(f,y,2) 
+
+>> diff(f,2) 
+
+>> diff(diff(f))
+
+>> int(f) 
+
+>> int(f,y) 
+
+>> int(f,1,10) 

@@ -1,0 +1,27 @@
+
+regex: (\w)x\1
+string: axa
+
+regex: (\w)x\1 
+string: axb
+
+regex: (\w)x(\w)\1\2 
+string: axcbc
+
+regex: (\w)x(\w)\1\2 
+string: axcac
+
+regex: (a)?b\1 
+string: b
+
+regexp('ab','(a)?b\1 
+string: 
+
+regexp('aba','(a)?b\1 
+string: 
+
+regexp('ab','(?>a)?b\1
+string: 
+
+regexp('ab','(a)+b\1
+string: 

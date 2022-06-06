@@ -1,0 +1,89 @@
+titleSlide = add(ppt,'Title Slide');    %add(presentation, 'slidelayout') for slide layouts see power point
+
+% when we make an empty presentation you may note that the ppt will 
+% automatically insert things like title so the idea here is to replace 
+% those one by one
+
+replace(titleSlide,'Title','Creating Histoghram Plots');  
+
+%close(ppt); 
+% this will enfore the ppt to be saved and written to hard disk
+% wihtout this command the ppt will not be saved and it will remain in the matlab memory 
+
+Text_of_Subtitle = Paragraph('The ');
+MoreText = Text('histogram');
+
+% for more information please consult this page 
+% https://www.mathworks.com/help/rptgen/ug/mlreportgen.dom.text-class.html
+% The easy way is to write on the commadn window the name of the variable
+% and it will display its different properties that you may set. For
+% instance if i am interested in inspecting the properties of the text, i
+% will write MoreText on command window. 
+
+MoreText.Font = 'Courier New';
+MoreText.FontColor = 'red'; 
+MoreText.FontSize = '18pt';
+MoreText.Bold = 1;
+MoreText.Italic = 1; 
+MoreText.Strike = 'single';
+MoreText.Underline = 'dotted';
+Text_of_Subtitle.HAlign = 'center';
+
+append(Text_of_Subtitle,MoreText);
+append(Text_of_Subtitle,' Function');
+replace(titleSlide,'Subtitle',Text_of_Subtitle);
+close(ppt);    % example 1 is now complete. now let us do something more
+
+% In addition to the above properties some other useful properties of paragraphs are given below 
+% paragraphObj.HAlign = 'center', 'left', 'right', 'justify'
+% paragraphObj.FirstLineIndent = '0.5in' etc 
+% paragraphObj.OuterLeftMargin = '0.5in' etc
+
+%% ------------- Adding a figure to the ppt --------------------------------
+x = 0:pi/10:2*pi;
+y1 = sin(x);
+y2 = sin(x-0.25);
+y3 = sin(x-0.5);
+figure
+plot(x,y1,'g',x,y2,'b--o',x,y3,'c*')
+saveas(gcf,'myPlot_img.png');     % gcf is the pointer to the current figure
+
+Plot_picture = Picture('myPlot_img.png');
+Slide_with_picture = add(ppt,'Title and Picture');    % adding a slide at a specific location Slide_with_picture = add(ppt,'Title and Picture',2); make sure it does not exceed the number of slide 
+replace(Slide_with_picture,'Title','Sine Plots');
+replace(Slide_with_picture,'Picture',Plot_picture);
+
+% To fine tune the figure properties 
+
+%close(ppt); 
+
+
+%% ------------- Adding Items to the text of slide ----------------------
+
+
+Slide_with_bulleted_text = add(ppt,'Title and Content');
+Text_of_title = Paragraph('This Slide Contains my Personal Information');
+replace(Slide_with_bulleted_text,'Title',Text_of_title);
+replace(Slide_with_bulleted_text,'Content',{'My Name is',...
+{'First Name:', {'Nouman'}, 'Last Name:', {'Azam'}},... 
+'This is all about me'});
+
+
+
+
+%% ------------- Adding a Table to the ppt --------------------------------
+Slide_with_table = add(ppt,'Title and Table');
+replace(Slide_with_table,'Title','Some Arbitrary');
+
+%------------ Table based on some matrix ----------------------------------
+Table_1 = Table(magic(9));
+replace(Slide_with_table,'Table',Table_1);
+
+%------------ Table based on table data type ---------------------------
+data = readtable('D:\Online Courses\MATLAB for everything Automate your life with MATLAB\11 - Generating power point presentation\code anda data\Data.csv');
+Table_1 = Table(data);
+replace(Slide_with_table,'Table',Table_1);
+close(ppt);
+
+% Explain some properties of the table by looking at the table object in
+% command window

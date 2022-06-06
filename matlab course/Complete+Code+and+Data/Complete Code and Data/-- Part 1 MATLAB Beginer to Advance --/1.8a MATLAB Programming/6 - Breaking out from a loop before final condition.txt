@@ -1,0 +1,10 @@
+fprintf('Please enter a number and i am going to tell you the next prime number after that \n'); 
+N = input(''); 
+
+for i = N:inf
+	if isprime(i)
+		fprintf('The next prime number after the number you entered is %d',i);
+		break;
+	end 
+end 
+

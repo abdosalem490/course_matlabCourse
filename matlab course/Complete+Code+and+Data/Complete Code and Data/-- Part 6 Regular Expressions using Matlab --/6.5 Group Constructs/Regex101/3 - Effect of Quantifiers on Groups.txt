@@ -1,0 +1,24 @@
+
+regex: ([aeiou][^aeiou]){2} 
+string: anon
+
+regex: [aeiou][^aeiou]{2}
+string: anon
+
+regex: [aeiou][^aeiou]{2}
+string: ann
+
+regex: (ab)+
+string: ababab
+
+regex: ab+
+string: ababab
+
+regex: (ab)+a
+string: ababab
+
+regex: (ab)+?a
+string: ababab
+
+regex: (ab)?
+string: ababab

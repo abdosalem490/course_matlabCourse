@@ -1,0 +1,37 @@
+clear all
+
+% Step 1: N = user defined input 
+N = input('Enter a number greater than or equal to 2');
+
+%Step 2: Current_number = N+1; 
+Current_number = N+1;
+
+%Step 3: Repeat
+while 1
+      %Step 4: If the Current_number is a prime.
+      if isprime(Current_number)
+            %Step 5: Stop and exit and return Current_number.
+            fprintf('The Next prime number after the given number is %d ',Current_number);
+           break;
+      end
+%Step 6: Increment Current_number by 1
+Current_number = Current_number +1;
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear all
+
+% Step 1: N = user defined input 
+N = input('Enter a number greater than or equal to 2');
+
+%Step 2: Current_number = N+1; 
+Current_number = N+1;
+
+%Step 3, 4: Repeat If the Current_number is not a prime.
+while ~isprime(Current_number)
+    %Step 5: Increment Current_number by 1
+    Current_number = Current_number +1;
+end
+% Step 6: Display the current number to the user
+fprintf('The Next prime number after the given number is %d ',Current_number);
+      

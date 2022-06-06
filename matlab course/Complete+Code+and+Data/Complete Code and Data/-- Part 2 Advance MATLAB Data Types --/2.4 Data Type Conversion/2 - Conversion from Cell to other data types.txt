@@ -1,0 +1,33 @@
+>> C = {5,'cereal',110,'C+';12,'pizza',140,'B';23,'salmon',367,'A';2,'cookies',160,'D'}
+
+>> T = cell2table(C) 
+
+>> T = cell2table(C,'VariableNames',{'Age','FavouriteFood','Calories','Likes'})
+
+>> C = {rand(3);rand(3)}
+
+>> cell2mat(C)
+
+>> devel = {{'Lee','Reed','Hill'}, {'Dean','Frye'}, ...
+   {'Lane','Fox','King'}};
+
+>> sales = {{'Howe','Burns'}, {'Kirby','Ford'}, {'Hall'}};
+
+>> mgmt = {{'Price'}, {'Clark','Shea'}, {'Sims'}};
+
+>> qual = {{'Bates','Gray'}, {'Nash'}, {'Kay','Chase'}};
+
+>> docu = {{'Lloyd','Young'}, {'Ryan','Hart','Roy'}, {'Marsh'}};
+
+>> employees = [devel; sales; mgmt; qual; docu] 
+
+>> rowHeadings = {'development', 'Sales', 'management', 'quality','documentation'} 
+
+>> dept = cell2struct(employees,rowHeadings,1)
+
+>> dept(1) 
+
+>> dept(2) 
+
+>> dept(3) 
+

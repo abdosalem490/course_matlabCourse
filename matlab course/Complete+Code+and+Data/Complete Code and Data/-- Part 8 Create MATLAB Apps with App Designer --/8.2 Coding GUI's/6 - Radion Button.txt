@@ -1,0 +1,20 @@
+% ----- Put this code in the callback of pushbutton ------ %           
+
+selectedButton = app.ButtonGroup.SelectedObject; 
+value = selectedButton.Text; 
+
+if app.s1.Value == 1
+	's1 is selected'
+	%app.s2.enable = 'off'
+end 
+
+switch value
+case 'Option 1'
+	app.text.Value = 'option 1'; 
+case 'Option 2'
+	app.text.Value = 'option 2'; 
+case 'Option 3'
+	app.text.Value = 'option 3'; 
+case 'Option 4'
+	app.text.Value = 'option 4'; 
+end 

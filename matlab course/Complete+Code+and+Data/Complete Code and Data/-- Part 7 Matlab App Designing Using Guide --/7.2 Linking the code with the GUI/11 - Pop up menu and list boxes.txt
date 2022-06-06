@@ -1,0 +1,13 @@
+% ---- Add this code to the callback of the popup menu ------%
+
+option = get(handles.popupmenu1, 'Value');
+x = 0.0:0.01:50;
+y = sin(x);
+
+if option == 2
+    bar(handles.axes1,x,y);
+end 
+
+if option ==3
+    plot(handles.axes1,x,y);
+end 

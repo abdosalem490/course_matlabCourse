@@ -1,0 +1,60 @@
+clear all 
+
+%Step 1: Two inputs First_number and Second_number
+First_number = input('Enter the first number \n'); 
+Second_number = input('Enter the second number \n');
+    
+%Step 2: Determine digits in the first_number
+First_number =str2double(regexp(num2str(First_number),'\d','match')); 
+
+%Step 3: Find permutations of the First_number
+permuted_numbers = perms(First_number);  
+[rows, col] = size(permuted_numbers); 
+
+for j=1:col
+    permuted_numbers(:,j) = permuted_numbers(:,j)*(10^(col-j));
+end
+permuted_numbers = sum(permuted_numbers,2);
+    
+
+%Step 4: Check if the second number is the list of permutations for the first number
+if ismember(Second_number,permuted_numbers)
+
+    %Step 5: Print the second number is a permutation of the first number 
+    fprintf('Yes the two numbers have the same digits \n');
+else
+    fprintf('No the two numbers does not have the same digits \n');
+end 
+
+
+
+%%%%%%%%%% Alternate Solution %%%%%%%%%%%%%%%%%%%%%%
+clear all 
+
+%Step 1: Two inputs First_number and Second_number
+First_number = input('Enter the first number \n'); 
+Second_number = input('Enter the second number \n');
+    
+%Step 2: Determine digits in the two numbers 
+
+First_number =str2double(regexp(num2str(First_number),'\d','match')); 
+Second_number =str2double(regexp(num2str(Second_number),'\d','match')); 
+
+%Step 3: 
+unique_digits = unique(First_number);
+flag  = 1;
+for i =1:length(unique_digits)
+    if sum(ismember(First_number,unique_digits(i))) ~= sum(ismember(Second_number,unique_digits(i)))
+        flag = 0;
+        break;
+    end
+end
+
+        
+%Step 4: Print the second number is a permutation of the first number         
+if  flag
+    fprintf('Yes the two numbers have the same digits \n');
+else
+    fprintf('No the two numbers does not have the same digits \n',i);
+end 
+

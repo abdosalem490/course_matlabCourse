@@ -1,0 +1,11 @@
+regexp('cat and dog','.a');
+
+regexp('cat and dog','.a', 'match');
+
+[start_index, ending_index] = regexp('cat and dog','.a');
+
+regexp('hello how are you','o','match'); 
+
+regexp('1+1=2', '1+1=2', 'match'); 
+
+regexp('1+1=2', '1\+1=2', 'match'); 

@@ -1,0 +1,13 @@
+%---- Note: The table T has been defined based on the commands in the previous tutorial ---- 
+
+>> sortrows(T) 
+
+>> sortrows(T,'Height_foots') 
+
+>> sortrows(T,'Height_foots','descend')
+
+>> sortrows(T,'RowNames','descend')
+
+>> sortrows(T,{'Height_foots','Ages_years'},{'ascend','descent'})
+
+>> sortrows(T,{'Height_foots','Ages_years'},{'ascend' 'descend'})

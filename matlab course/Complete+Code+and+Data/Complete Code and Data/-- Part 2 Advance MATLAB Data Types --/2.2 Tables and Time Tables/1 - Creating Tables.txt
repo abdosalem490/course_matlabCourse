@@ -1,0 +1,17 @@
+>> Age = [38;15;49;78;54]
+
+>> Height = [4;5;9;8;10]
+
+>> Weigth = [85;90;78;56;42] 
+
+>> T = table(Age,Height,Weigth)
+
+>> LastNames = {'Nouman','Asif','Shahid','Joe', 'Azam'}
+
+>> T = table(Age,Height,Weigth, 'RowNames',LastNames)
+
+>> T.Properties.RowNames = LastNames
+
+>> T = table(Age,Height,Weigth, 'VariableNames',{'Ages_years','Height_foots','Weight_Kgs'})
+
+>> T.Properties.RowNames = LastNames

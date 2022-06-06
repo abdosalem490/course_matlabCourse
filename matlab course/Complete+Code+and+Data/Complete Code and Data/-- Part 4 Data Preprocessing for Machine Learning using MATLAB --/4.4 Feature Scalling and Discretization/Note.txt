@@ -1,0 +1,4 @@
+AFter downloading the files and extracting them to a certain directory. 
+
+---------------- Make sure you mention the correct pathname of the directory -------------------------
+----------------  containing the file in the first line of the matlab code   -------------------------

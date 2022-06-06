@@ -1,0 +1,23 @@
+
+regex: http:\
+string: http:\
+
+regex: http:[\\]
+string: http:\
+
+regex: [-ab]ain
+string: -ain
+
+regex: [ab-]ain
+string: -ain
+
+regex: [\^ab]ain
+string: ^ain
+
+regex: [ab^]ain
+string: ^ain
+
+regex: [a^b]ain
+string: ^ain
+
+

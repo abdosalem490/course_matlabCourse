@@ -1,0 +1,8 @@
+
+regexp('Mr. male','Mr(s)?\.\s(?(1)female|male)','match')
+
+regexp('Mr. male Mrs. female','Mr(s)?\.\s(?(1)female|male)','match')
+
+regexp('Mr. female Mrs. male','Mr(s)?\.\s(?(1)female|male)','match')
+
+regexp('Mrs. female Mrs. male','Mr(?<sex>s)?\.\s(?(sex)female|male)','match')

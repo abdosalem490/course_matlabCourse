@@ -1,0 +1,236 @@
+clear all 
+
+
+%Step 1: Generate the numbers from 1,000 to 9,999
+Numbers = 1000:9999;
+ 
+%Step 2: d = 1
+d = 1;
+
+%Step 3: For each number from 1,000 to 9,999
+for i=1:length(Numbers) 
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(Numbers(i))
+
+        %Step 5: Check if the current number is a pandigital
+        %Step 5.1:  Obtain the individual digits that forms the number
+        string_form_number = num2str(Numbers(i)); 
+        thousandth_part = str2num(string_form_number(1)); 
+        hundredth_part = str2num(string_form_number(2)); 
+        tenth_part = str2num(string_form_number(3));
+        unit_part = str2num(string_form_number(4));
+        
+        %Step 5.2: Check if all the digits that forms the number are unique 
+         
+        Unit_digit = (unit_part == 0:9);
+        Tenth_digit = (tenth_part == 0:9);
+        Hundredth_digit = (hundredth_part == 0:9);
+        Thousandth_digit = (thousandth_part == 0:9);
+    
+        result = sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit));
+
+        %Step 6: Store the number in array pandigital_numbers(d)
+        %Step 7: Increment d by one
+        if result == 4
+            pandigital(d) = Numbers(i); 
+            d = d+1; 
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',max(pandigital))
+
+
+%%%%%%%%%%%%%%%%% code after removing variable Numbers%%%%%%%%%%%%%
+
+clear all 
+
+%Step 2: d = 1
+d = 1;
+
+%Step 3: For each number from 1,000 to 9,999
+for i=1000:9999
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(i)
+
+        %Step 5: Check if the current number is a pandigital
+        %Step 5.1:  Obtain the individual digits that forms the number
+        string_form_number = num2str(i); 
+        thousandth_part = str2num(string_form_number(1)); 
+        hundredth_part = str2num(string_form_number(2)); 
+        tenth_part = str2num(string_form_number(3));
+        unit_part = str2num(string_form_number(4));
+        
+        %Step 5.2: Check if all the digits that forms the number are unique 
+        Unit_digit = (unit_part == 0:9);
+        Tenth_digit = (tenth_part == 0:9);
+        Hundredth_digit = (hundredth_part == 0:9);
+        Thousandth_digit = (thousandth_part == 0:9);
+    
+        result = sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit));
+
+        %Step 6: Store the number in array pandigital_numbers(d)
+        %Step 7: Increment d by one
+        if result == 4
+            pandigital = i; 
+            d = d+1; 
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',max(pandigital))
+
+
+
+%%%%%%%%%%%%%%%% code without pandigital variable %%%%%%%%%%%%%%%%%%%%%
+clear all 
+
+
+%Step 3: For each number from 1,000 to 9,999
+for i=1000:9999
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(i)
+
+        %Step 5: Check if the current number is a pandigital
+        %Step 5.1:  Obtain the individual digits that forms the number
+        string_form_number = num2str(i); 
+        thousandth_part = str2num(string_form_number(1)); 
+        hundredth_part = str2num(string_form_number(2)); 
+        tenth_part = str2num(string_form_number(3));
+        unit_part = str2num(string_form_number(4));
+        
+        %Step 5.2: Check if all the digits that forms the number are unique 
+        Unit_digit = (unit_part == 0:9);
+        Tenth_digit = (tenth_part == 0:9);
+        Hundredth_digit = (hundredth_part == 0:9);
+        Thousandth_digit = (thousandth_part == 0:9);
+    
+        result = sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit));
+
+         if result == 4
+            pandigital = i; 
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',pandigital)
+
+%%%%%%%%%%% Deteleting the intermediate variables %%%%%%%%%%%%%%%%%%
+clear all 
+
+%Step 3: For each number from 1,000 to 9,999
+for i=1000:9999
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(i)
+
+        %Step 5: Check if the current number is a pandigital
+        string_form_number = num2str(i); 
+        Unit_digit = (str2num(string_form_number(4)) == 0:9);
+        Tenth_digit = (str2num(string_form_number(3)) == 0:9);
+        Hundredth_digit = (str2num(string_form_number(2)) == 0:9);
+        Thousandth_digit = (str2num(string_form_number(1)) == 0:9);
+    
+        result = sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit));
+
+        if result == 4
+            pandigital = i; 
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',pandigital)
+
+%%%%%%%%%%%%% Refining the for loop for quick convergence %%%%%%%%%%%%%%%%%%
+clear all 
+
+%Step 3: For each number from 9,999 to 1,000 
+for i=9999:-1:1000
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(i)
+
+        %Step 5: Check if the current number is a pandigital
+        string_form_number = num2str(i); 
+        Unit_digit = (str2num(string_form_number(4)) == 0:9);
+        Tenth_digit = (str2num(string_form_number(3)) == 0:9);
+        Hundredth_digit = (str2num(string_form_number(2)) == 0:9);
+        Thousandth_digit = (str2num(string_form_number(1)) == 0:9);
+    
+        result = sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit));
+      
+        if result == 4
+            pandigital = i; 
+            break;
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',pandigital)
+
+
+%%%%%%%%% Deleting the variable of Results %%%%%%%%%%%%%%%%%%
+clear all 
+
+%Step 3: For each number from 9,999 to 1,000 
+for i=9999:-1:1000
+ 
+    %Step 4: Check if the current number is a prime
+    if isprime(i)
+
+        %Step 5: Check if the current number is a pandigital
+        string_form_number = num2str(i); 
+        Unit_digit = (str2num(string_form_number(4)) == 0:9);
+        Tenth_digit = (str2num(string_form_number(3)) == 0:9);
+        Hundredth_digit = (str2num(string_form_number(2)) == 0:9);
+        Thousandth_digit = (str2num(string_form_number(1)) == 0:9);
+    
+        if sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit)) == 4
+            pandigital = i; 
+            break;
+        end
+    end 
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',pandigital)
+
+%%%%%% Further reducing the iterations with primes buitin function %%%%%%%%
+clear all 
+
+Prime_numbers = primes(9999); 
+
+%Step 3: For each prime four digit prime number from highest to lowest 
+for i=length(Prime_numbers):-1:1
+ 
+        %Step 5: Check if the current number is a pandigital
+        string_form_number = num2str(Prime_numbers(i)); 
+        Unit_digit = (str2num(string_form_number(4)) == 0:9);
+        Tenth_digit = (str2num(string_form_number(3)) == 0:9);
+        Hundredth_digit = (str2num(string_form_number(2)) == 0:9);
+        Thousandth_digit = (str2num(string_form_number(1)) == 0:9);
+    
+        if sum(or(or(or(Unit_digit,Tenth_digit),Hundredth_digit), Thousandth_digit)) == 4
+            pandigital = Prime_numbers(i); 
+            break;
+        end
+    
+    
+end
+
+%Step 8: Print the maximum of pandigital_numbers
+fprintf('The maximum pandigital number with four digits which is also a prime number %d \n',pandigital)

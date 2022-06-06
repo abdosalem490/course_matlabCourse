@@ -1,0 +1,10 @@
+
+regexp('The following animal are capable of flying','\w*(?=ing)','match') 
+
+regexp('100 USD, 75 USD, 22000 JPY, 9000 PKR, 500 USD','\d+\s(?=USD)','match')
+
+T = regexp('100 USD, 75 USD, 22000 JPY, 9000 PKR, 500 USD','(\d+)(?:\s)(?=USD)','tokens')
+
+regexp('quit','q(?!u)','match')
+
+regexp('quit','q(?=u)it','match') 

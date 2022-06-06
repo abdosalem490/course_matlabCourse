@@ -1,0 +1,60 @@
+>> a = 10
+
+a =
+
+    10
+
+>> b = 15
+
+b =
+
+    15
+
+>> z
+Unrecognized function or variable 'z'.
+ 
+>> z = 1511
+
+z =
+
+        1511
+
+>> z
+
+z =
+
+        1511
+
+>> who
+
+Your variables are:
+
+a  b  z  
+
+>> whoa
+Unrecognized function or variable 'whoa'.
+ 
+Did you mean:
+>> whos
+  Name      Size            Bytes  Class     Attributes
+
+  a         1x1                 8  double              
+  b         1x1                 8  double              
+  z         1x1                 8  double              
+
+>> clear a
+>> whos
+  Name      Size            Bytes  Class     Attributes
+
+  b         1x1                 8  double              
+  z         1x1                 8  double              
+
+>> clear all
+>> whos
+>> x = 10
+
+x =
+
+    10
+
+>> 

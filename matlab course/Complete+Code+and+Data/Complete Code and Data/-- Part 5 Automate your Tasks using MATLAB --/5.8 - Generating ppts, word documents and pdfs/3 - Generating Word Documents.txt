@@ -1,0 +1,184 @@
+
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_TP_only = Report('D:\Tile_page_report','docx');
+
+Title_page = TitlePage();
+Title_page.Title = 'My First Report using MATLAB';
+Title_page.Subtitle = 'Document with Title only';
+Title_page.Image = 'D:\Tiger.jpg';
+Title_page.Author = 'Nouman Azam';
+Title_page.Publisher = 'Udemy';
+Title_page.PubDate = date();
+
+add(Report_with_TP_only,Title_page);
+close(Report_with_TP_only);
+
+
+%% ---------------- To override some of the default properties of fonts ---
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_TP_only = Report('D:\Tile_page_documentoutput','docx');
+
+Title_page = TitlePage();
+
+Title_main_text = Paragraph('My First Report using MATLAB'); 
+Title_main_text.FontFamilyName = 'Courier New';
+Title_main_text.Color = 'red'; 
+Title_main_text.FontSize = '18pt';
+Title_main_text.Bold = 1;
+Title_main_text.Italic = 1; 
+Title_page.Title = Title_main_text; 
+
+Title_page.Subtitle = 'Document with Title only';
+Title_page.Image = 'D:\Tiger.jpg';
+Title_page.Author = 'Nouman Azam';
+Title_page.Publisher = 'Udemy';
+Title_page.PubDate = date();
+
+add(Report_with_TP_only,Title_page);
+close(Report_with_TP_only);
+
+
+%% ---------------- Adding Headings to the document ----------------------
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_a_section = Report('D:\Report_with_Section','docx');
+open(Report_with_a_section); 
+
+Chapter_1 = Heading1('Chapter 1'); 
+Chapter_1.Style = {PageBreakBefore(true)};
+
+add(Report_with_a_section,Chapter_1);
+
+Section_1 = Heading2('Section 1.1');
+add(Report_with_a_section,Section_1);
+
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+Para_2 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+
+add(Report_with_a_section,Para_1);
+add(Report_with_a_section,Para_2);
+
+Section_1_2 = Heading2('Section 1.2');
+Section_1_2.Style = {PageBreakBefore(true)};
+
+add(Report_with_a_section,Section_1_2);
+
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+Para_2 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+
+add(Report_with_a_section,Para_1);
+add(Report_with_a_section,Para_2);
+
+close(Report_with_a_section);
+rptview(Report_with_a_section); 
+
+
+
+%% ---------------- Now let us add TOC to the same document ---------------
+
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_a_section = Report('D:\Report_with_Section','docx');
+open(Report_with_a_section); 
+
+Toc = TableOfContents;
+Toc.Title = Text('Table of Contents');
+Toc.Title.Color = 'green';
+Toc.TOCObj.NumberOfLevels = 2; 
+Toc.Title.FontSize = '48pt'; 
+
+add(Report_with_a_section,Toc);
+
+Chapter_1 = Heading1('Chapter 1'); 
+Chapter_1.Style = {PageBreakBefore(true)};
+
+add(Report_with_a_section,Chapter_1);
+
+Section_1 = Heading2('Section 1.1');
+add(Report_with_a_section,Section_1);
+
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+Para_2 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+
+add(Report_with_a_section,Para_1);
+add(Report_with_a_section,Para_2);
+
+Section_1_2 = Heading2('Section 1.2');
+Section_1_2.Style = {PageBreakBefore(true)};
+
+add(Report_with_a_section,Section_1_2);
+
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+Para_2 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+
+add(Report_with_a_section,Para_1);
+add(Report_with_a_section,Para_2);
+
+close(Report_with_a_section);
+rptview(Report_with_a_section); 
+
+
+%% ---------------- Adding chapters and sections based TOC and page breaks ---------------
+
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_a_section = Report('D:\Report_with_Section','docx');
+open(Report_with_a_section); 
+
+
+
+
+Toc = TableOfContents;
+Toc.Title = Text('Table of Contents');
+Toc.Title.Color = 'green';
+Toc.TOCObj.NumberOfLevels = 2; 
+
+add(Report_with_a_section,Toc);
+
+
+
+Chapter_1 = Chapter('Introduction'); 
+Section_1 = Section('First Section of the Chapter');
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+add(Section_1,Para_1); 
+Page_break = PageBreak(); 
+add(Section_1,Page_break);
+
+Section_2 = Section('Second Section of the Chapter');
+Para_2 = Paragraph('Here we go with some text in the Second paragraph of the document'); 
+add(Section_2,Para_2); 
+
+add(Chapter_1,Section_1);
+add(Chapter_1,Section_2);
+
+add(Report_with_a_section,Chapter_1);
+
+
+Chapter_2 = Chapter('Background'); 
+Section_1 = Section('First Section of the Chapter');
+Para_1 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+add(Section_1,Para_1); 
+add(Section_1,Page_break);
+
+Section_2 = Section('Second Section of the Chapter');
+Para_2 = Paragraph('Here we go with some text in the first paragraph of the document'); 
+add(Section_2,Para_2); 
+
+add(Chapter_2,Section_1);
+add(Chapter_2,Section_2);
+
+add(Report_with_a_section,Chapter_2);
+
+
+close(Report_with_a_section);
+rptview(Report_with_a_section); 

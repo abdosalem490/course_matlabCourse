@@ -1,0 +1,21 @@
+>> s(1).name = 'nouman'
+
+>> s(1).age = 34
+
+>> s(1).grade = 'A+'
+
+>> s(2).name = 'Azam'
+
+>> s(2).age = 38
+
+>> s(2).grade = 'A' 
+
+>> T = struct2table(s)
+
+>> T.Properties.Row = T.name
+
+>> T.name = [] 
+
+>> T = struct2table(s,'RowNames',{'student 1' 'student 2'})
+
+>> S1 = table2struct(T) 

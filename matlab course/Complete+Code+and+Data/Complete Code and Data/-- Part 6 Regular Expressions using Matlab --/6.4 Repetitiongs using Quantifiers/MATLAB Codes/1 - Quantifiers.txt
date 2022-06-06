@@ -1,0 +1,20 @@
+
+regexp('aa','a?aa','match')
+
+regexp('aaa','a?aa','match')
+
+regexp('a ab b ba','ba?','match')
+
+regexp('.m','\w?\w?\.m','match')
+
+regexp('a.m','\w?\w?\.m','match')
+
+regexp('ab.m','\w?\w?\.m','match')
+
+regexp('abc.m','\w?\w?\.m','match')
+
+regexp('a aa aaa aaaa baab bab','a+','match')
+
+regexp('image1.gif and background.gif','\w+\.gif','match')
+
+regexp('a ab abbbb ','ab*','match')

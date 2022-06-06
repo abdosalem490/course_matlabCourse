@@ -1,0 +1,12 @@
+
+regex: (?:\$)([0-9]+)\.([0-9]{2})
+string: the price of this item is $9.08
+
+regex: (?:\$)([0-9]+)\.([0-9]{2})
+string: the price of this item is $9.08
+
+regex: (?:Joh?n)\s(\w*)
+string: John Nash, Saint Paul, John Peter
+
+regex: ([A-Z])+([0-9])+(?:\.[0-9]+)
+string: ASD234.4556

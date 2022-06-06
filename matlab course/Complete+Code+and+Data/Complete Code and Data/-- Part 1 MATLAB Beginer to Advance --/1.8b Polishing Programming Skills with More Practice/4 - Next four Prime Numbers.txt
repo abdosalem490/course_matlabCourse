@@ -1,0 +1,35 @@
+clear all
+
+% Step 1: N = user defined input 
+N = input('Enter a number greater than or equal to 2');
+
+%Step 2: Current_number = N, Primes_found = 0
+Current_number = N;
+Primes_found = 0;
+
+%Step 3: Four_primes -> an array for storing 4 prime
+Four_primes = zeros(1,4);
+
+%Step 4: Repeat until the primes_found is not equal to 4
+while Primes_found ~= 4 
+    
+    %Step 5: Increment Current_number by 1
+    Current_number = Current_number +1;
+
+    %Step 6: If the Current_number is a prime.
+    if isprime(Current_number)
+
+        %Step 7: Increment Primes_found
+        Primes_found = Primes_found +1;
+
+        %Step 8: Store the current number in Four_prime
+        Four_primes(Primes_found) = Current_number;        
+    end
+
+
+end
+
+% Step 9: Print the four numbers
+fprintf('Prime numbers\n');
+disp(Four_primes)
+        

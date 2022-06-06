@@ -1,0 +1,88 @@
+%--------- Common Programming Errors ------------ 
+% -------- 1. Error in variable naming ---------
+
+%------- 1.1 Mistakes in the spelling of a variable ----------
+
+%Notes: when you click on the variable all of its instance will be
+%highlighted and also on teh extreme right scroll bar there will horizontal
+%bars which will indicate the position in the code where you will be able
+%to find the instances of the variabel 
+
+
+% variable = 56; 
+% variable = variable +2; 
+% disp(variable1);
+
+
+% ------- 1.2 Variable naming conventions ---------- 
+% Notes: should not start with a digit (in the middle digits are allowed) 
+% or special character and should not have spaces.  'namelengthmax'  is a
+% command which can be used to know the maximum allowed length for a
+% variable after which the matlab will ignore the rest.   'isvarname variablename' is
+% another useful command which can be used to check if a particular
+% variable name is allowed by matlab or not. 
+% 8maximum_length = 9;
+% _maximum_length = 9;
+% maxi$mum_length = 9;
+% maxi,mum_length = 9;
+
+% ------- 1.3 using script name as a variable  ---------
+Common_Er = 10;
+
+%Notes: This will happen to you very often espacially when you want to code
+%some specific notions with closely related variables also appearing in
+%your code and they are sometimes very hard to pick and isolate and will 
+% take significant mount of time 
+
+
+
+% ------- 1.4 using matlab reserve word as variable ---------
+% Notes: the matlab reserve words are shown in  different color so its 
+% easy to avoid using as variables. For complete list of reserve words type
+% iskeyword on matlab command window  
+
+otherwise  = 56;
+
+% ------- 1.5 Using the name of a builtin function as a variable name ------ 
+max = [4 5 6 9]; 
+max(max) 
+%Note: to use the max function in this case you need to delete variable max
+% first and tehn you would you be able to use the max function. To delete 
+% you need to use clear variablename 
+
+
+% --------1.6  Using the constant defined inside matlab as a variable -----
+% Notes: Again the idea here is to avoid using the variables such as i,i
+% and pi inside the programs if you suspect that you will be dealing with
+% complex numbers or angles etc. To properly use them, you need to first
+% take clear them out from memory and then you will be able to use them. 
+
+i = 5;
+clear i    %add this line 
+x = [-i pi+i*pi/2 -1+i*4];
+y = sin(x)
+
+
+% ------- 1.7 Executing a matlab function without saving it ------------
+% ------- In some of the pervious versions, the matlab would not auto-save
+% the function file when you edit it, however in the newer version the
+% matlab will auto save them and therefore they do not suffer from this
+% anymore
+
+square_root(5)
+
+function y = square_root(x)
+y = xx;
+end 
+
+% ------ 1.8 Array indexing issues due to hard coding ----------------
+% Note: 
+ 
+n = 15; 
+x = rand(1,n);
+x = x .* 10; 
+
+for i=1:20 
+    new_x = x(i) /10; 
+end 
+  

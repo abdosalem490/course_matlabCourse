@@ -1,0 +1,4 @@
+% ----- Put these lines in the opening function of background button ----%
+
+bg = imread('D:\matlab\button.png');
+set(handles.pushbutton1,'CData', bg);

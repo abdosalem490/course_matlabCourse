@@ -1,0 +1,10 @@
+regexp('tain and pain','.a','match');
+
+regexp('ain and pain','.a','match');
+
+regexp('a','.a','match');  
+
+regexp('aa','.a','match');  
+
+regexp('aaa', '.a','match'); 
+

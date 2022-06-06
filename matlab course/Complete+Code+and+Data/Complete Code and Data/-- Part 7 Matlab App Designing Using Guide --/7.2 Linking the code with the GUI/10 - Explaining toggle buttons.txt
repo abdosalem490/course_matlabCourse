@@ -1,0 +1,8 @@
+% ---- Add this code to the callback of the toggle button ------%
+
+a = get(handles.togglebutton1,'Value');
+if a ==1
+    b = 'it is pressed'
+else 
+    b = 'it is not pressed'
+end 

@@ -1,0 +1,38 @@
+% % There is no obvious error but there is a bug somewhere in the program 
+% 
+% a = input('Enter the first number ','s'); 
+% 
+% b = input('Enter the Second number '); 
+% c = input('Enter the third number ');
+% fprintf('The result of addition is %d \n', a+b+c);
+
+
+% How to use the continue in debugging mode. Put two break points on the result variable 
+% i do not want to go through the entire code but rather i would like to stop and investigate certain portions
+% clear all 
+% 
+% x = [1 1 1 1 1 1 1];
+% y = [2 3 5 0 1 2 5]; 
+% 
+% for i=1:length(x)
+%     if y(i) == 0 
+%         result = 1
+%     else 
+%         result(i) = x(i) / y(i)
+%     end 
+% end 
+% 
+% plot(result)
+
+
+
+%Showing the functionality of step in and step out 
+
+x = 10; 
+y = 20;
+summation(x,y)
+function z = summation(x,y)
+x = length(x);
+y = (1:n)./x;
+z = x+y; 
+end 

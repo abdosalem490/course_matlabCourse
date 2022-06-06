@@ -1,0 +1,15 @@
+%---- Note: The table T has been defined based on the commands in the previous tutorial ---- 
+
+>> T(2:4,:)
+
+>> T(2:4,2:3)
+
+>> T(1:2:5,2:3)
+
+>> T(1:2:end,2:3) 
+
+>> T(end:-2:1,2:3) 
+
+>> T(:,[3 1 2])
+
+%--- Note: 

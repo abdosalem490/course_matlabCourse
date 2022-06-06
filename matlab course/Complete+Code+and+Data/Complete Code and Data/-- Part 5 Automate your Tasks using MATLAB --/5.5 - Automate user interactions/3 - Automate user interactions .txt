@@ -1,0 +1,108 @@
+%%------ A simple program for plotting ------------------------------------
+
+clear all 
+
+x = [0:0.1:2*pi];
+y = sin(x);
+
+choice = input('Press 1 for line plot and 2 for scatter'); 
+
+
+if choice == 1 
+    plot(x,y);
+elseif  choice == 2
+    scatter(x,y); 
+else 
+    fprintf('Your selection is not correct'); 
+end 
+
+
+%% --------------- Let us automate this program by taking input from inputdlg 
+
+clear all 
+
+x = [0:0.1:2*pi];
+y = sin(x);
+
+choice = inputdlg('Press 1 for line plot and 2 for scatter'); 
+
+if str2num(cell2mat(choice)) == 1 
+    plot(x,y);
+elseif  str2num(cell2mat(choice) == 2
+        scatter(x,y); 
+else 
+    fprintf('Your selection is not correct'); 
+    
+end
+
+
+%% --------------- Let us further automate this by showing the output in 
+% in msgbox 
+
+clear all 
+
+x = [0:0.1:2*pi];
+y = sin(x);
+
+choice = inputdlg('Press 1 for line plot and 2 for scatter'); 
+
+
+if str2num(cell2mat(choice)) == 1 
+    plot(x,y);
+elseif  str2num(cell2mat(choice) == 2
+        scatter(x,y); 
+else 
+    msgbox('Your choice was not correct','Error','error'); % 'warn' and 'help' are other options
+end 
+
+
+%% --------------- The user may make a mistake in providing the input
+% so we further automate by taking the input in the form of question ------
+
+clear all 
+
+x = [0:0.1:2*pi];
+y = sin(x);
+
+
+choice = questdlg('Which plot would you like us to display', ...
+	'Plot Selection ', ...
+	'Simple Plot','Scatter','Simple Plot');
+
+
+% we need to change the order becuae the choice will be empty and we can
+% not check it against values 
+
+if isempty(choice) 
+    msgbox('You did not make any selection','Error','error'); % 'warn' and 'help' are other options
+elseif isequal(choice, 'Simple Plot')
+    plot(x,y);
+else  
+    scatter(x,y);     
+end 
+
+
+%% --------------- We can also use a listbox to take the input from the user 
+% in case you want the user to select multiple choice rather than one choice 
+
+clear all 
+
+x = [0:0.1:2*pi];
+y = sin(x);
+
+[choice,tf] = listdlg('PromptString',{'Which plot would you like us to display'},...
+     'ListString',{'Simple Plot', 'Scatter'});
+
+
+% we need to change the order becuae the choice will be empty and we can
+% not check it against values 
+
+if tf ==0 
+    msgbox('Your did not make any selection','Error','error'); % 'warn' and 'help' are other options
+elseif choice == 1 
+    plot(x,y);
+else  
+    scatter(x,y);     
+end 
+
+

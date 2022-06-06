@@ -1,0 +1,15 @@
+
+regexp('some','so\we','match') 
+
+regexp('#ab','\Wab','match') 
+
+regexp('1ab','Wab','match') 
+
+regexp('Nouman phone # is 581670','\d\d\d\d\d\d','match') 
+
+regexp('the price of this article is $24','\$\d\d','match')  
+
+
+
+
+

@@ -1,0 +1,4 @@
+% ----- Put this code in the callback of pushbutton ------ %
+
+value = app.ListBox.Value; 
+app.EditField.Value = value; 

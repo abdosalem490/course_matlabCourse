@@ -1,0 +1,14 @@
+% ----- Put this code in the callback of popup menu ---- %
+
+s = get(handles.popupmenu1,'Value'); 
+global option1; 
+global option2; 
+
+if s == 1
+	option1 = option1 + 1; 
+else 
+	option2 = option2 + 1; 
+end
+ 
+set(handles.text1,'string',strcat('Option1: ',num2str(option1), ' Option 2: ',num2str(option2))); 
+

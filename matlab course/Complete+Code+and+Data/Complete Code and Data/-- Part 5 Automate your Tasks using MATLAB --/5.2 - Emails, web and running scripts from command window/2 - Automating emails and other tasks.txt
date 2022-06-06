@@ -1,0 +1,45 @@
+% learn how to execute matlab from command window 
+% matlab -nosplash -nodesktop -r "x = [4 5 8 9 6]; plot(x)" 
+% matlab -nosplash -nodesktop -r "run('d:\prog.m')"   
+% ----- The general syntax "complete path where matlab.exe is location for example C:\Program Files\Polyspace\R2020a\bin\matlab.exe" -nosplash -nodesktop -r "run('d:\prog.m')"   
+
+
+
+%--------------- learning how to make matlab batch jobs of matlab code ---- 
+%--------------- Store these two lines in a .bat file and then single click on them will do the job for you. 
+% matlab -nosplash -nodesktop -r "x = 5; disp(x)" 
+
+
+
+%% before running the code make sure that you go on the link below and 
+%  turnoff less secure apps
+%  https://www.google.com/settings/security/lesssecureapps
+
+
+%-------------- add these two lines to the batch file-----
+% matlab -nosplash -nodesktop -r "run('D:\Email_program.m')"
+% matlab -nosplash -nodesktop -r "run('D:\Initial_tasks.m')"
+
+
+% ------ The Email_program.m contains the code below -------- 
+%%--------------- Sending a simple mail ---------------------
+
+setpref('Internet','SMTP_Server', 'smtp.gmail.com');
+setpref('Internet','E_mail','nouman.azam@gmail.com');
+setpref('Internet','SMTP_Username','nouman.azam@gmail.com');
+setpref('Internet','SMTP_Password','yourpassword');
+
+props = java.lang.System.getProperties;
+props.setProperty('mail.smtp.auth','true');
+props.setProperty('mail.smtp.starttls.enable','true');
+
+sendmail('nouman.azam@nu.edu.pk',strcat("Hi Collegues, I arrived in office at ", string(datestr(now,'HH:MM:SS')))); 
+
+
+
+
+% ------ The Initial_task.m contains the code below ---------- 
+
+web('bbcurdu.com')
+web('https://www.theweathernetwork.com/pk/weather/khaibar-pakhtunkhwa/peshawar')
+

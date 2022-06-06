@@ -1,0 +1,36 @@
+
+%% before running the code make sure that you go on the link below and 
+%  turnoff less secure apps
+%  https://www.google.com/settings/security/lesssecureapps
+
+%%------ Sending a simple mail --------
+setpref('Internet','SMTP_Server', 'smtp.gmail.com');
+setpref('Internet','E_mail','nouman.azam@gmail.com');
+setpref('Internet','SMTP_Username','nouman.azam@gmail.com');
+setpref('Internet','SMTP_Password','yourpassword');
+
+props = java.lang.System.getProperties;
+props.setProperty('mail.smtp.auth','true');
+props.setProperty( 'mail.smtp.starttls.enable', 'true');
+
+sendmail('nouman.azam@nu.edu.pk','Hello from Myself'); 
+
+
+%%------ For sending an attachment with the email --------
+sendmail({'nouman.azam@nu.edu.pk','nouman.azam@gmail.com'},'Hello From MATLAB!', ... 
+'Thanks for using sendmail service of matlab', 'D:\Tiger.jpp'); 
+
+%%----- opening up a specific webpage over the internet
+
+web('www.google.com')
+web('www.google.com', '-browser')   % for opening in system default browswer 
+
+
+%% ---- Executing system function -----------------
+system('notedpad')      % do not return control to matlab 
+fprintf('This will not be executed');
+system('notedpad &')    %returns control to matlab immediately
+system('taskkill /im Mspaint.exe')   %forcefully closing a program 
+					
+
+

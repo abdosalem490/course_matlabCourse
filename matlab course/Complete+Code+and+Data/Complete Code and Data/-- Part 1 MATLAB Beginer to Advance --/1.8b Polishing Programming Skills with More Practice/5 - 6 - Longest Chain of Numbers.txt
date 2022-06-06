@@ -1,0 +1,38 @@
+clear all 
+
+%Step 1: Iterate through I =1 to 100 
+for i = 1:100
+ 
+    %Step 2: j = 1 and n = i
+    j = 1; 
+    n = i;
+    
+    %Step 3: An array called chain with each row containing chain / sequence for number I. 
+    %Initialize Chain(i,j) = n  
+    chain(i,j) = n;
+    
+    %Step 4: Repeat until the n ~= 1
+    while n~= 1  
+        
+        %Step 5: If n is even then n = n /2
+        if rem(n,2) == 0
+            n = n/2; 
+            
+        %Step 6: Else n = n*3 +1
+        else 
+            n = (3*n) + 1;  
+        end
+        
+        %Step 7: Store n in chain(i,j) and increment j by one.
+        chain(i,j) = n;
+        j = j+1;
+    end 
+    
+    %Step 8: Chain_length(i) = length of elements in Chain(i,:)
+    chain_length(i) = j; 
+end
+
+%Step 9: Print the index of the element with max value in Chain_length
+[max_value, max_index] = max(chain_length);
+fprintf('The number under 100 with maximum length %d \n', max_index); 
+

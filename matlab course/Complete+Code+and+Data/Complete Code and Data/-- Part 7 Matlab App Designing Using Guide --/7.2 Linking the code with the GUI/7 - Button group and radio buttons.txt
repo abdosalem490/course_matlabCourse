@@ -1,0 +1,4 @@
+% ---- Add this code to the call back of push button ----------%
+
+c = get(handles.uibuttongroup1,'SelectedObject');
+x = get(c, 'String');

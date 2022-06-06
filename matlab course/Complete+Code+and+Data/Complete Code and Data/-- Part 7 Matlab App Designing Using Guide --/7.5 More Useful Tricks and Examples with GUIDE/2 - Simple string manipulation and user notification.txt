@@ -1,0 +1,8 @@
+% ----- Put this code in the callback of push button ---- %
+Text = get(handles.text1,'string');
+
+if isempty(Text)
+        set(handles.text1,'string','Nothing to delete. Try deleting Me');
+else 
+        set(handles.text1,'string',Text(1:end-1));
+end 

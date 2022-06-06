@@ -1,0 +1,45 @@
+%%
+sequence = '0';
+correct_ans = 0;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '1';
+correct_ans = 1;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+%%
+sequence = '0 1';
+correct_ans = 1;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '1 0';
+correct_ans = 1;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '0 0';
+correct_ans = 0;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '1 1';
+correct_ans = 2;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '1 1 1 1 1 1 1 1 1 1';
+correct_ans = 10;
+assert(isequal(longest_seq(sequence),correct_ans))
+
+
+%%
+sequence = '1 0 0 1 0 1 0 1 1 1 1 1 0 1 0 0 1 1 1 1 1';
+correct_ans = 5;
+assert(isequal(longest_seq(sequence),correct_ans))

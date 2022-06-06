@@ -1,0 +1,17 @@
+regexp('http:\','http:\','match') 
+
+regexp('http:\','http:[\\]','match') 
+
+regexp('-ain','[-ab]ain','match') 
+
+regexp('-ain','[ab-]ain','match') 
+
+regexp('^ain','[\^ab]ain','match') 
+
+regexp('^ain','[ab^]ain','match') 
+
+regexp('^ain','[a^b]ain','match') 
+
+
+
+

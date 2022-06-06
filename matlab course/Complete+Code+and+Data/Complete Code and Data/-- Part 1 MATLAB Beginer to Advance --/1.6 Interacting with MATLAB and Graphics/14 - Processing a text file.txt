@@ -1,0 +1,32 @@
+>> my_text = fileread('D:1.txt'); 
+
+>> my_text = string(my_text); 
+
+>> my_text = splitlines(my_text); 
+
+>> my_text(1:5)
+
+>> TF = (my_text == '');
+ 
+>> my_text(TF) = []; 
+
+>> p = {'.', '?', ','}; 
+
+>> my_text = replace(my_text,p, ' '); 
+
+>> my_text(1:20)
+
+>> my_text = strip(my_text); 
+
+>> my_text(1:20)
+
+>> my_text = join(my_text); 
+
+>> my_text = split(my_text); 
+
+>> my_text(1:20)
+
+>> x = tabulate(my_text); 
+
+
+

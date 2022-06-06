@@ -1,0 +1,30 @@
+clear all
+
+%Step 1: N = user defined input for the Nth prime
+N = input('Enter a number greater than or equal to 2 ');
+
+%Step 2: Primes_found = 0;
+%Step 3: Current_number = 2; 
+Primes_found = 0;
+Current_number = 2;
+
+%Step 4: Repeat
+while 1
+      %Step 5: If the Current_number is a prime.
+      if isprime(Current_number) == 1
+
+          %Step 6: Increment the Primes_found by 1. 
+          Primes_found = Primes_found +1;
+
+          %Step 7: Check if the Primes_found is equal to N.
+          if Primes_found == N
+ 
+              %Step 8: Stop and exit and return current_number.
+              fprintf('The requested Nth prime number is %d ',Current_number);
+              break;
+          end   
+      end
+      
+      %Step 9: Increment Current_number by 1
+      Current_number = Current_number +1;
+end

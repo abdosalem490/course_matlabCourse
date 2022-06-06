@@ -1,0 +1,14 @@
+
+regexp('hi how are you nouman','\w{3,5}','match') 
+
+regexp('a aa aaa aaaa aaaaaaaaaa','a{3,6}','match') 
+
+regexp('921.583','\d{1-3}\.\d{1-3}','match') 
+
+regexp('921.583','\d{1-3}','match')
+
+regexp('a aa aaa aaaa aaaaaaaaaa','a{3,}','match') 
+
+regexp('1000 100 10','\d{4}','match')
+
+regexp('100 1.2  9  33','\d{1,}','match') 

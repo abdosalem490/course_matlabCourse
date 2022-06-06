@@ -1,0 +1,16 @@
+
+T = regexp('anon','([aeiou][^aeiou]){2}','match')  
+
+T = regexp('anon','[aeiou][^aeiou]{2}','match') 
+
+T = regexp('ann','[aeiou][^aeiou]{2}','match') 
+
+T = regexp('ababab','(ab)+','match') 
+
+T = regexp('ababab','ab+','match') 
+
+T = regexp('ababab','(ab)+a','match') 
+
+T = regexp('ababab','(ab)+?a','match') 
+
+T = regexp('ababab','(ab)?','match')

@@ -1,0 +1,8 @@
+
+regexp('abc','^a','match')
+
+regexp('abc','c$','match')
+
+regexp('abc ab abc','^a','match')
+ 
+regexp('abc ab abc',’$c’,’match’) 

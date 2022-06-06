@@ -1,0 +1,14 @@
+% ---- Notes: Save in the current working directory ----- 
+% ---- Notes: save the code below in a file with the same name as that of the function name and with .m extention ----
+
+function square(a)
+
+fprintf('The square of the input provided is %d \n', a*a);
+
+end
+
+
+% ---- Notes: put the code below in a new script ---- 
+n = 5; 
+square(n); 
+ 

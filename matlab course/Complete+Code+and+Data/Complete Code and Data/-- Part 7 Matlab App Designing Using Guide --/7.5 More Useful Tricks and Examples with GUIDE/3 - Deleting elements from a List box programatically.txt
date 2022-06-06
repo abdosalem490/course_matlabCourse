@@ -1,0 +1,5 @@
+% ----- Put this code in the callback of push button ---- %
+
+L = get(handles.listbox1,{'string','value'});
+L{1}(L{2}(:)) = [];
+set(handles.listbox1,'string',L{1});

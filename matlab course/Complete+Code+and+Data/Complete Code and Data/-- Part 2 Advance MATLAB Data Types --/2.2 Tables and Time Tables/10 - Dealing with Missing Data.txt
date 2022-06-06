@@ -1,0 +1,29 @@
+>> X = readtable('D:\iris_missing_data.csv')
+
+>> X(1:5,:)
+
+>> Y = rmmissing(X)
+
+>> Y(1:5,:)
+
+>> Y = rmmissing(X,2)
+
+>> Y(1:5,:)
+
+>> Y = rmmissing(X,'MinNumMissing',3)
+
+>> X(1:5,:)
+
+>> Y = rmmissing(X,'MinNumMissing',2) 
+
+>> Y = rmmissing(X,2,'MinNumMissing',2)
+
+>> Y = rmmissing(X,2,'MinNumMissing',1)
+
+>> Y = rmmissing(X,'DataVariable',{'Sepal_Length'})
+
+>> Y = rmmissing(X,'DataVariable',{'Sepal_Length','Sepal_Width'})
+
+>> Y = rmmissing(X,'DataVariable',{'Sepal_Width','Petal_Width'})
+
+

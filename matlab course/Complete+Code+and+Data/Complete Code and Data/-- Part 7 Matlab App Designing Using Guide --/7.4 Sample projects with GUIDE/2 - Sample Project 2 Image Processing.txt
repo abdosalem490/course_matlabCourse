@@ -1,0 +1,37 @@
+% --------- Code for the load function ------- %
+
+[filename pathname] = uigetfile({'*.jpg'},'File Selector');
+
+fullpathname = strcat(pathname,filename);
+
+axes(handles.axes1);
+image = imread(fullpathname);
+imshow(image);
+
+% --------- Code for the BW function ------- %
+
+global image
+axes(handles.axes1);
+gray_image = rgb2gray(image);
+bw_image = im2bw(gray_image);
+imshow(bw_image);
+
+% --------- Code for the Grayfunction ------- %
+
+global image
+axes(handles.axes1);
+gray = rgb2gray(image);
+imshow(gray);
+
+% --------- Code for the Brightness function ------- %
+global image
+axes(handles.axes1);
+val = get(handles.slider1,'Value')+0.5;
+gray_image = rgb2gray(image);
+brightness = val*gray_image;
+imshow(brightness);
+
+
+
+
+

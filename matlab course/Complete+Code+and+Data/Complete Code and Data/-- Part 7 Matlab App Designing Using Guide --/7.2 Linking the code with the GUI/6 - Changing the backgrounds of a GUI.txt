@@ -1,0 +1,14 @@
+% ----- Put this code in the opening function ---- %
+
+ah = axes('unit', 'normalized', 'position', [0 0 1 1]);
+bg = imread('D:\matlab\background.png'); imagesc(bg);
+set(ah,'handlevisibility','off','visible','off');
+uistack(ah, 'bottom');
+
+
+
+
+% ---- Put this code in the axes1 create function ----% 
+
+axes(hObject);
+imshow('D:\matlab\background.png')

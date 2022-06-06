@@ -1,0 +1,10 @@
+% declare the counter as a private property variable
+
+% ----- put this code in the call back of the push button1 ---- 
+app.counter = app.counter+1; 
+app.field1.value = app.counter; 
+
+
+% ----- put this code in the call back of the push button2 ---- 
+app.counter = app.counter+1; 
+app.field2.value = app.counter;  

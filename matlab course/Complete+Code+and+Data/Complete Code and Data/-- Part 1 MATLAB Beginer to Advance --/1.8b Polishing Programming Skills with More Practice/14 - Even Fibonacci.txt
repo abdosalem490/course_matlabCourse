@@ -1,0 +1,27 @@
+clear all 
+
+%Step 1: Initialize F(1) =1, F(2) = 2, n = 2, summation = 0
+F(1) = 1;
+F(2) = 2;
+n = 2;
+summation = 0; 
+
+%Step 2: Repeat until f(n) <= 10,000
+while F(n) <= 100   
+ 
+    %Step 3: If F(n) is even
+    if rem(F(n),2) == 0
+
+        %Step 4: Summation = summation + F(n) 
+        summation = summation + F(n); 
+    end
+    
+    %Step 5: Increment n by 1
+    n = n + 1;
+    
+    %Step 6: F(n) = F(n-1) + F(n-2)
+    F(n) = F(n-1) + F(n-2);   
+end 
+
+%Step 7: Print the value of summation
+fprintf('The summation of even Fibonacci Numbers less than Ten Thousand %d \n',summation);

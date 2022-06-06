@@ -1,0 +1,14 @@
+
+regex('<EM>first</EM>','<.+>','match')
+
+regex('<EM>first</EM>','<.+?>','match')
+
+regex('Loins can be dangerous at times','a.*a','match') 
+
+regex('Loins can be dangerous at times','a.*?','match') 
+
+regex('Loins can be dangerous at times','a.+?','match') 
+
+regex('toronto','o\w*o','match') 
+
+regex('toronto','o\w*?o','match') 

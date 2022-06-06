@@ -1,0 +1,6 @@
+% ----- Put this code in the callback of pushbutton ------ %           
+app.UITable.Data = rand(8); 
+
+
+% ----- Put this code in the callback of cell edit ------ %           
+app.EditField.Value = 'the table is updated'

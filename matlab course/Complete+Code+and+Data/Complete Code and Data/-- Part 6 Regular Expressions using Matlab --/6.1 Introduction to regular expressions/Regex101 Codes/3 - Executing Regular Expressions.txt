@@ -1,0 +1,13 @@
+
+regex: .a
+string: cat and dog
+
+regex: o
+string: hello how are you
+
+regex: 1+1=2 
+string: 1+1=2
+
+regex: 1\+1=2 
+string: 1+1=2
+

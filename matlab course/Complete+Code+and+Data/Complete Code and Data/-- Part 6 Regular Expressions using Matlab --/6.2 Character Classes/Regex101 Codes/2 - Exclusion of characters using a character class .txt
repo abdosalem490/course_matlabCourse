@@ -1,0 +1,37 @@
+
+regex: train
+string: [^prs]ain
+
+regex:[^prs]ain
+string: main
+
+regex: [^*prs]ain
+string: train
+
+regex: [^023]ain   
+string:  ain      (Please note a space in the begining of the string)
+
+regex: [A-Z]ain   
+string: Pain
+
+regex: [A-Z]ain
+string: pain
+
+regex: [a-z]ain
+string: pain
+
+regex: [0-9]ain
+string: 1ain
+
+regex: [0-9]ain
+string: ain
+
+regex: [p-r]ain
+string: rain
+
+regex: [^A-Z]ain
+string: tain
+  
+regex: [A-Za-z]ain
+string: tain
+ 

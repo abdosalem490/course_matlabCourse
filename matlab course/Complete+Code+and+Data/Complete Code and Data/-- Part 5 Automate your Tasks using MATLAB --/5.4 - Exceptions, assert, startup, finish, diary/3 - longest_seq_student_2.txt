@@ -1,0 +1,6 @@
+function conseq_ones = longest_seq_student_2(sequence)
+    
+sequence = str2num(sequence); 
+conseq_ones = max(accumarray(nonzeros((cumsum(~sequence)+1).*sequence),1)); 
+
+end 

@@ -1,0 +1,12 @@
+>> zeros(5) 
+
+>> zeros(5,2) 
+
+>> ones(5) 
+
+>> ones(5,4) 
+
+>> magic(5) 
+
+>> magic(3) 
+

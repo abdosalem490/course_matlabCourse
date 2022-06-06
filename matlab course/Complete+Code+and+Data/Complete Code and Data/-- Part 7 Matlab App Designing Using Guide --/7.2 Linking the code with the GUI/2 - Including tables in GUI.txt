@@ -1,0 +1,7 @@
+% ----- Put this code in the callback of pushbutton ---- %
+
+set(hanldes.uitable,'Data',rand(3)); 
+set(handles.uitable,'ColumnName',{'ist','2nd','3rd'}); 
+x = get(handles.uitable,'Data'); 
+
+

@@ -1,0 +1,8 @@
+% ----- Put this code in the callback of checkbox ---- %
+x = get(handles.checkbox2,'value');
+
+if x ==1 
+    set(handles.text1,'visible','on');
+else 
+    set(handles.text1,'visible','off');
+end 

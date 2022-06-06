@@ -1,0 +1,7 @@
+% ----- Put this code in the callback of pushbutton ------ %           
+
+[filename pathname] = uigetfile({'*.txt'}, 'File Selector'); 
+fullpathname = strcat(pathname,filename);
+text = fileread(fullpathname); 
+app.EditField.Value = filename; 
+app.EditField.Value = text; 

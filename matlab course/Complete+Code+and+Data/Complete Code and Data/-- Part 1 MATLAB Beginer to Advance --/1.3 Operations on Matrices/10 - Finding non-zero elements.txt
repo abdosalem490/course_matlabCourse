@@ -1,0 +1,13 @@
+>> X = [0 0 1 2; 5 4 0 6; 8 7 9 0]
+
+>> find(X) 
+
+>> find(X,3) 
+
+>> find(X,3, 'Last')
+
+>> [row, col] = find(X) 
+
+>> [row, col] = find(X,3)
+
+ 

@@ -1,0 +1,32 @@
+% -------- Example: 1 ------
+
+n = input('Enter a number'); 
+
+switch n
+	case 1 
+		disp('The number is a positive one'); 
+	case 0 
+		disp('The number is a zero'); 
+	case -1
+		disp('The number is a negative one'); 
+	otherwise 
+		disp('I dont know'); 
+end 
+
+
+% -------- Example: 2 ------
+
+n = input('Enter a fruit that you like ', 's'); 
+
+switch n
+	case 'banana' 
+		disp('Your choice is banana'); 
+	case 'mango' 
+		disp('Your choice is mango'); 
+	case 'apple'
+		disp('Your choice is apple'); 
+	otherwise 
+		disp('I dont know'); 
+end 
+
+		

@@ -1,0 +1,18 @@
+%---- Note: The table T has been defined based on the commands in the previous tutorial ---- 
+ 
+>> t1 = table([45;78;89],[54;78;89],[1;0;2])
+
+>> t1.Properties.VariableNames = {'Variable1', 'Variable2', 'Variable3'}
+
+>> T.Properties.VariableUnits = {'Yrs','Foots','Kgs'}
+
+>> summary(T)
+
+>> T.Properties.VariableDescriptions('Ages_years') = {'This variable contains ages in year'}
+
+>> T.Properties.VariableDescriptions = {'This variable contains ages in years', 'This represents height', 'This is the weight variable'}
+
+>> T.Ages_years
+
+>> T.Weight_Kgs
+

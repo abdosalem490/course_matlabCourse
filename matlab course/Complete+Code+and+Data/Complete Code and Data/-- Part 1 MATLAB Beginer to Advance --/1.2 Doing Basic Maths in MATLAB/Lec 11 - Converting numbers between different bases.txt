@@ -1,0 +1,14 @@
+>> dec2base(300,2) 
+
+>> A = [5 8 9 7]
+
+>> dec2base(A,2)
+
+>> base2dec('10000',2) 
+
+>> base2dec('ff',16) 
+
+>> x = base2dec('1111',2) 
+
+>> dec2base(x,16) 
+

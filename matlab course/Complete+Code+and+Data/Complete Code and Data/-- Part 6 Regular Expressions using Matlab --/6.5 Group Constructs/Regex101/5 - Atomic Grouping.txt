@@ -1,0 +1,9 @@
+
+regex: a(bc|b)c 
+string: abcc abc
+
+regex: a(?>bc|b)c 
+string: abcc abc
+
+regex: (?>.*)c 
+string: abc

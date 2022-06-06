@@ -1,0 +1,151 @@
+%% ------------------- Program 1 ------------------------------------------
+% -------------- Importing Libraries ----------- 
+
+import java.awt.Robot;
+import java.awt.event.*;
+robot = java.awt.Robot ();
+
+%---------------- Open up the notepad and MATLAB side by side -------------
+% --------------- Determine the location of the notepad ------------------- 
+
+robot.delay(1000);
+C = get(0, 'PointerLocation')   % use this function to know the area of screen where we need to click to select notepad
+loc_notepad = [106 450];
+
+Screen_size = get(0,'screensize'); 
+% converting between the two conventions
+robot.mouseMove(loc_notepad(1),(Screen_size(4)-loc_notepad(2))+1);
+
+robot.delay(1000);
+robot.mousePress(KeyEvent.BUTTON1_MASK);   %left click of the mouse 
+robot.mouseRelease(KeyEvent.BUTTON1_MASK); 
+
+% -------------- Writting to Notepad -------------------------------------- 
+
+robot.keyPress(KeyEvent.VK_H);
+robot.keyRelease(KeyEvent.VK_H);
+robot.keyPress(KeyEvent.VK_E);
+robot.keyRelease(KeyEvent.VK_E);
+robot.keyPress(KeyEvent.VK_L);
+robot.keyRelease(KeyEvent.VK_L);
+robot.keyPress(KeyEvent.VK_L);
+robot.keyRelease(KeyEvent.VK_L);
+robot.keyPress(KeyEvent.VK_O); 
+robot.keyRelease(KeyEvent.VK_O);
+robot.keyPress(KeyEvent.VK_SPACE); 
+robot.keyRelease(KeyEvent.VK_SPACE);
+robot.keyPress(KeyEvent.VK_G);
+robot.keyRelease(KeyEvent.VK_G);
+robot.keyPress(KeyEvent.VK_U);
+robot.keyRelease(KeyEvent.VK_U);
+robot.keyPress(KeyEvent.VK_Y);
+robot.keyRelease(KeyEvent.VK_Y);
+robot.keyPress(KeyEvent.VK_S);
+robot.keyRelease(KeyEvent.VK_S);
+
+robot.delay(1000);
+
+%% -------------- Open dialog box for Saving the file ---------------------
+
+robot.keyPress(KeyEvent.VK_CONTROL);
+robot.keyPress(KeyEvent.VK_SHIFT);
+robot.keyPress(KeyEvent.VK_S);
+robot.keyRelease(KeyEvent.VK_S);
+robot.keyRelease(KeyEvent.VK_SHIFT);
+robot.keyRelease(KeyEvent.VK_CONTROL);
+
+
+% --------------- Move mouse cursor to the textbox in file browswer -------
+
+C = get(0, 'PointerLocation') ;
+texbox_loc = [253 333];
+
+robot.mouseMove(textbox_loc(1),(Screen_size(4)-textbox_loc(2))+1);
+
+robot.delay(1000);
+
+robot.mousePress(KeyEvent.BUTTON1_MASK);
+robot.mouseRelease(KeyEvent.BUTTON1_MASK); 
+
+% -------------- Delete everything that preexist in teh textbox ----------- 
+
+robot.keyPress(KeyEvent.VK_CONTROL);
+robot.keyPress(KeyEvent.VK_A);
+robot.keyPress(KeyEvent.VK_DELETE)
+robot.keyRelease(KeyEvent.VK_DELETE);
+robot.keyRelease(KeyEvent.VK_A);
+robot.keyRelease(KeyEvent.VK_CONTROL);
+
+robot.delay(1000);
+
+% -------------- Add name to the file and presse enter to save ------------ 
+robot.keyPress(KeyEvent.VK_A);
+robot.keyRelease(KeyEvent.VK_A);
+robot.keyPress(KeyEvent.VK_B);
+robot.keyRelease(KeyEvent.VK_B);
+robot.keyPress(KeyEvent.VK_C);
+robot.keyRelease(KeyEvent.VK_C);
+
+robot.delay(1000);
+
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+
+
+
+%% ------------------- Program 2 ------------------------------------------
+% -------------- Importing Libraries ------------------------------------- 
+import java.awt.Robot;
+import java.awt.event.*;
+robot = java.awt.Robot();
+
+%---------------- Open up Web browser ------------------------------------- 
+%---------------- Determine the location of address bar and click it ------ 
+
+C = get(0, 'PointerLocation');
+Address_bar_loc = [186 707];
+
+Screen_size = get(0,'screensize'); 
+robot.mouseMove(Address_bar_loc(1),(Screen_size(4)-Address_bar_loc(2))+1);
+
+robot.mousePress(KeyEvent.BUTTON1_MASK);
+robot.delay (2000);
+robot.mouseRelease(KeyEvent.BUTTON1_MASK); 
+
+%---------------- Delete existing address from the address bar ------------
+
+robot.keyPress(KeyEvent.VK_CONTROL);
+robot.keyPress(KeyEvent.VK_A);
+robot.keyPress(KeyEvent.VK_DELETE)
+robot.keyRelease(KeyEvent.VK_DELETE);
+robot.keyRelease(KeyEvent.VK_A);
+robot.keyRelease(KeyEvent.VK_CONTROL);
+
+%---------------- Typing desired Web address in address bar and brwse it - 
+
+robot.keyPress(KeyEvent.VK_G);
+robot.keyRelease(KeyEvent.VK_G);
+robot.keyPress(KeyEvent.VK_O);
+robot.keyRelease(KeyEvent.VK_O);
+robot.keyPress(KeyEvent.VK_O);
+robot.keyRelease(KeyEvent.VK_O);
+robot.keyPress(KeyEvent.VK_G);
+robot.keyRelease(KeyEvent.VK_G);
+robot.keyPress(KeyEvent.VK_L); 
+robot.keyRelease(KeyEvent.VK_L);
+robot.keyPress(KeyEvent.VK_E); 
+robot.keyRelease(KeyEvent.VK_E);
+robot.keyPress(KeyEvent.VK_PERIOD);
+robot.keyRelease(KeyEvent.VK_PERIOD);
+robot.keyPress(KeyEvent.VK_C);
+robot.keyRelease(KeyEvent.VK_C);
+robot.keyPress(KeyEvent.VK_O);
+robot.keyRelease(KeyEvent.VK_O);
+robot.keyPress(KeyEvent.VK_M);
+robot.keyRelease(KeyEvent.VK_M);
+
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+
+

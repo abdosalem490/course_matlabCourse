@@ -1,0 +1,12 @@
+%---- Note: The table T has been defined based on the commands in the previous tutorial ---- 
+
+>> summary(T) 
+
+>> X = evalc('summary(T)')
+
+>> fid = fopen('D:\summary.txt','w')
+
+>> fprintf(fid,'%s',X)
+
+>> fclose(fid) 
+

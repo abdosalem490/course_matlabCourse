@@ -1,0 +1,8 @@
+% ----- Put this code in the callback of slider ---- %
+
+a = get(handles.slider1, 'Value');
+x = 0:0.1:50
+y = sin(a*x);
+plot(handles.axes1,x,y);
+
+set(handles.text,'String',a);

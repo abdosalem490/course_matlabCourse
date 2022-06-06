@@ -1,0 +1,15 @@
+fprintf('Please enter the students data for exam no.1 \n');
+d = 1; 
+
+for i=1:10
+	fprintf('Did student No. %d attempted exam [Y|N] \n',i);
+	
+	c1 = input('','s');
+	if c1 == 'N'
+		continue; 
+	end  
+
+	fprintf('Please enter the grade for the student \n');
+	grade(d) = input(''); 
+	d = d + 1; 
+end 

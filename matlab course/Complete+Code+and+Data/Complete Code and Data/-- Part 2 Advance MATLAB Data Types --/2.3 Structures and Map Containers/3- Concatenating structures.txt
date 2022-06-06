@@ -1,0 +1,24 @@
+>> s1.a = [1 2 3]
+
+>> s1.b = {'a' 'b' 'c'}
+
+>> s2.a = rand(3) 
+
+>> s2.b = 'hello' 
+
+>> s1,s2
+
+>> combined_s1s2 = [s1,s2] 
+
+>> combined_s1s2(1)
+
+>> s1(1) 
+
+>> combined_s1s2(2)
+
+>> s2(1)
+
+ 
+
+
+

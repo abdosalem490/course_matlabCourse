@@ -1,0 +1,26 @@
+>> A = [1 2 3; 4 5 6; 7 8 9]
+
+>> size(A) 
+
+>> [row col] = size(A) 
+
+>> A = [1 2 3 4; 4 5 6 6 ; 7 8 9 7]
+
+>> [row col] = size(A)
+
+>> length(A) 
+
+>> a = 'how are you man' 
+
+>> length(a)
+
+>> whos 
+
+>> a = string('how are you man')
+
+>> length(a) 
+
+>> strlength(a) 
+
+>> whos 
+

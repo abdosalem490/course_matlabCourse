@@ -1,0 +1,18 @@
+% ---- Add this code to the callback of the push button ------%
+
+a = get(handles.buttongroup1,'SelectedObject');
+b = get(a,'String');
+
+switch b 
+	case 'option 1'
+
+    	set(handles.check1,'Enable','On'); 
+	set(handles.check2,'Enable','Off'); 
+	set(handles.check3,'Enable','Off'); 
+
+	case 'option2' 
+	
+	set(handles.check1,'Enable','Off'); 
+	set(handles.check2,'Enable','On'); 
+	set(handles.check3,'Enable','On'); 
+end 

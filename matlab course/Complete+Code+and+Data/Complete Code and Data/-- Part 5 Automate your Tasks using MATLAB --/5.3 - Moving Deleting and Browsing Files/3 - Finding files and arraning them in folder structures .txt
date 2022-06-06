@@ -1,0 +1,34 @@
+% -------- Scenario 1: Moving all the PDF files from downloads to some other location
+% -------- Step 1 is to stores all the files from the folder of downloads that are pdfs 
+%--------- Step 2 is to make a new directory 
+% -------- step 3 is to read all the files names alongwtih their paths and move to the desired location
+
+
+% clear all 
+% files = dir('C:\Users\IdeaPad\Downloads\*.pdf'); 
+% mkdir D:\PDFsfromdownloaded
+% 
+% for i=1:length(files) 
+%     file_path_name = string(strcat(files(i).folder,'\',files(i).name));   
+%     movefile(file_path_name, 'D:\PDFsfromdownloaded\')
+% end 
+
+
+%----- Scenario 2: Moving all the PDF files from downloads to other
+%----- Directory and arranging them based on the months they were created in
+
+clear all 
+files = dir('C:\Users\IdeaPad\Downloads\*.pdf'); 
+
+for i=1:length(files) 
+    file_path_name = string(strcat(files(i).folder,'\',files(i).name));        
+    date_created = datetime(files(i).date,'format','dd-MMM-yyyy HH:mm:ss'); 
+    month_of_pdf = month(date_created,'name'); 
+    
+    if ~isfolder(strcat('D:\PDFsfromdownloaded\',string(month_of_pdf)))
+       mkdir(strcat('D:\PDFsfromdownloaded\',string(month_of_pdf))); 
+    end
+    movefile(file_path_name,strcat('D:\PDFsfromdownloaded\',string(month_of_pdf)));   
+    
+end
+

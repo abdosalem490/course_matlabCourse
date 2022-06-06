@@ -1,0 +1,19 @@
+
+regex: so\we
+string: some
+
+regex: \Wab
+string: #ab
+
+regex: Wab
+string: 1ab
+
+regex: \d\d\d\d\d\d
+string: Nouman phone # is 581670
+
+regex: \$\d\d
+string: the price of this article is $24
+
+
+
+

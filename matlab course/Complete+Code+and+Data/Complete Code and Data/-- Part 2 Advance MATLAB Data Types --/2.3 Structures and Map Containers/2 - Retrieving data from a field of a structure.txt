@@ -1,0 +1,17 @@
+>> student = struct('dateofbirth','','Age',{},'Subjects',{},'Grades',{})
+
+>> student(1).Subject = {'English' 'Math' 'Science' 'General Knowledge '}
+
+>> student(1).Grades = [80 70 85 90]
+
+>> rmfield(student,'Subjects')
+
+>> student(1).Grades(1) 
+
+>> student(1).Grades(2) 
+
+>> student(1).Grades(2)*8
+
+>> student(1).Subject(2) 
+
+>> student(1).Subject{2} 

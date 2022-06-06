@@ -1,0 +1,12 @@
+
+regex: ([atc]+)=\1
+string: cat=cat
+
+regex: ([atc])+=\1
+string: cat=cat
+
+regex: ([atc])+=\1
+string: cat=t
+
+regex: (?P<tag1>\w)x(?P=tag1)
+string: axa

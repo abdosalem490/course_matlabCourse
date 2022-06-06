@@ -1,0 +1,18 @@
+
+regex: (cat|dog)
+string: It will match either a cat or dog
+
+regex: (some|something) 
+string: it will not match the string of something
+
+regex: (something|some) 
+string: it will not match the string of something
+
+regex: some(thing)? 
+string: it will not match the string of something
+
+regex: cat|dog
+string: It will match either a cat or dog
+
+regex: some(thing)?? 
+string: it will not match the string of something

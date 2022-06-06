@@ -1,0 +1,95 @@
+%--------------- Adding MATLAB generated plots to the document ------------
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_images = Report('D:\Report_with_Plots','docx');
+
+x = 0:pi/100:2*pi;
+y = sin(x);
+plot(x,y);
+saveas(gcf,'myPlot_img.png');
+
+Plot_for_report = Image('myPlot_img.png');
+add(Report_with_images,Plot_for_report);
+
+close(Report_with_images);
+rptview(Report_with_images);
+
+
+
+%--------------- Let us add caption to the image now ----------------------
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*
+
+Report_with_images = Report('D:\Report_with_Plots','docx');
+% an additional option if you do not want the matlab to display the plot at run time
+figure('visible','off');   
+x = 0:pi/100:2*pi;
+y = sin(x);
+plot(x,y);
+
+saveas(gcf,'Plot_imgage.png');
+
+Plot_for_report = FormalImage('Plot_imgage.png');        
+% The image will be auto adjusted according the size and margins of the
+% document. This is becuase there is a nice property called ScaleToFit
+% which by default is one. 
+
+Caption_of_image = Paragraph('Plot for the Sine Wave');
+Caption_of_image.HAlign = 'Center'; 
+Caption_of_image.FontFamilyName = 'Arial'; 
+Caption_of_image.FontSize = '12pt'
+Plot_for_report.Caption = Caption_of_image;
+
+add(Report_with_images,Plot_for_report);
+
+close(Report_with_images);
+rptview(Report_with_images);
+
+%--------------- Adding MATLAB generated matrices or tables the document --
+clear all 
+import mlreportgen.report.*
+import mlreportgen.dom.*;
+
+Report_with_table = Report('D:\Report_with_tables','docx');
+
+Data = readtable('D:\Online Courses\MATLAB for everything Automate your life with MATLAB\11 - Generating power point presentation\code anda data\Data.csv'); 
+Matrix = rand(5); 
+
+Table_for_report = FormalTable(Data); 
+%You may also try putting the matrices into the form of a table
+%Table_for_report = FormalTable(Matrix); 
+
+
+%Various properties of the table
+Table_for_report.Border = 'single';
+Table_for_report.ColSep = 'single';
+Table_for_report.RowSep = 'double';
+Table_for_report.TableEntriesHAlign = 'right'; 
+Table_for_report.TableEntriesVAlign = 'middle';
+Table_for_report.TableEntriesInnerMargin = '5pt';
+
+% Example 2: To add the title to the tables, it may not be possible with the formal 
+% Tables. The matlab in the new implementation defines a new type of table 
+% called based table for this purpose. The base tables are built on top of
+% formal tables which means that we can buil formal tables and then assigne
+% to the content property of the based table to have all the minor
+% modifications being applied to the table. this is becuase the basetable
+% does not have properties to modify the minute details. 
+
+Table_for_report1 = BaseTable();
+Table_for_report1.Content = Table_for_report;  
+Table_for_report1.Title = 'Random Values for the table'; 
+
+add(Report_with_table,Table_for_report1); 
+close(Report_with_table);
+rptview(Report_with_table);
+
+
+%Note: The functions for list of figures, tables and captions are introduced in the 
+% R2020b version but currenlty since i have the R2020a version therefore i do not 
+% have explicit access those however the syntax will be more or less the same as that of toc 
+
+

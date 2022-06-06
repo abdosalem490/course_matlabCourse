@@ -1,0 +1,12 @@
+
+regex: Mr(s)?\.\s(?(1)female|male)
+string: Mr. male
+
+regex: Mr(s)?\.\s(?(1)female|male)
+string: Mr. male Mrs. female
+
+regex: Mr(s)?\.\s(?(1)female|male)
+string: Mr. female Mrs. male
+
+regex: Mr(?<sex>s)?\.\s(?(sex)female|male)
+string: Mrs. female Mrs. male

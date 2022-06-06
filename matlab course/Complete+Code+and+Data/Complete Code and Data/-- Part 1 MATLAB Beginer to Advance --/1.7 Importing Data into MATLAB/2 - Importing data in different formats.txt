@@ -1,0 +1,6 @@
+>> x = csvread('data.csv');
+
+>> d = dlmread('data.txt',' '); 
+
+
+>> d = dlmread('data.txt','b'); 

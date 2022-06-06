@@ -1,0 +1,20 @@
+% ----- Put this code in the callback of SwitchValueChanged ------ %           
+value = app.Switch.Value;
+if isequal(value,'on')
+	app.Lamp.Color = 'Green';
+else 
+	app.Lamp.Color = 'Red';
+end 
+
+
+% ----- Put this code in the callback of TabGroup Selection ------ %           
+
+selectedTab = app.TabGroup.SelectedTab; 
+selectedTab.UserData = rand(3);
+ 
+ 
+%...... alternate code .... 
+selectedTab = app.TabGroup.SelectedTab; 
+if selectedTab = 'Tab 1'
+	'Do something'
+end 

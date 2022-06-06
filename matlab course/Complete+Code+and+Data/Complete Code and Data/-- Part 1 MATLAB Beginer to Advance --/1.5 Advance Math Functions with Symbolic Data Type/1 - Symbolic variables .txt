@@ -1,0 +1,20 @@
+>> a = sym(5/3) 
+
+>> syms a 
+
+>> syms a b c 
+
+>> a = sym('a')
+
+>> syms a 
+
+>> phi = (1+sqrt(sym(5)))/2 
+
+>> f = phi^2 + phi 
+
+>> syms a b c x 
+
+>> f = a*x^2 + b*x + c 
+
+
+

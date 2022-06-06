@@ -1,0 +1,7 @@
+% ---- Add this code to the callback of the push button ------%
+
+[filename pathname] = uigetfile({'*.txt'},'File Selector');
+fullpathname = strcat(pathname,filename);
+text = fileread(fullpathname);
+set(handles.text1, 'String', filename)
+set(handles.text2, 'String', text);

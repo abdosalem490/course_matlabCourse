@@ -1,0 +1,12 @@
+
+regexp('It will match either a cat or dog','(cat|dog)','match')
+
+regexp('it will not match the string of something','(some|something)','match') 
+
+regexp('it will not match the string of something','(something|some)','match') 
+
+regexp('it will not match the string of something','some(thing)?','match') 
+
+regexp('It will match either a cat or dog','cat|dog', 'match')
+
+regexp('it will not match the string of something','some(thing)??','match' ) 

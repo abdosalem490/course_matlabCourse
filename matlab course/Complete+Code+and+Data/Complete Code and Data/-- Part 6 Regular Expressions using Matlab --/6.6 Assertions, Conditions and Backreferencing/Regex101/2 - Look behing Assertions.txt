@@ -1,0 +1,9 @@
+
+regex: (?<=re)\w*
+string: recall renew
+
+regex: (?<=a)b\w*
+string: bed abolish debt
+
+regex: (?<!a)b\w*
+string: bed abolish debt 
